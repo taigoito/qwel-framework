@@ -1,6 +1,11 @@
     <section id="front-works" class="front-sec">
       <h2 class="front-sec-heading">works</h2>
-        <div class="slider slider-sm">
+        <ul class="featured-btns">
+          <li class="featured-btn-pendants"><a href="./product/pendants/">pendants</a></li>
+          <li class="featured-btn-rings"><a href="./product/rings/">rings</a></li>
+          <li class="featured-btn-pierces"><a href="./product/pierces/">pierces</a></li>
+        </ul>
+        <div class="slider slider-md">
           <div class="slider-inner">
             <?php
             $posts = get_posts([

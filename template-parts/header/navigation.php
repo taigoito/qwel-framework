@@ -11,7 +11,7 @@
       </div>
       <?php if (has_nav_menu('primary')) wp_nav_menu(['menu' => 'primary', 'menu_class' => 'navigation-menu']); ?>
       <ul class="navigation-menu">
-        <li><a href="https://www.instagram.com" target="_blank"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
+        <li><a href="https://www.instagram.com/fillmignon/" target="_blank"><span data-icon="ei-sc-instagram" data-size="m"></a></li>
       </ul>
       <button id="navigation-toggler" type="button" data-toggle="slidebar"><span data-icon="ei-navicon" data-size="m"></span></button>
     </div>

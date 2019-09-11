@@ -6,7 +6,7 @@ Author URI: https://qwel.design/
 
 // Setup
 
-function qwel_setup()
+function fillmignon_setup()
 {
   // アイキャッチ画像をサポート
   add_theme_support('post-thumbnails');
@@ -48,12 +48,12 @@ function qwel_setup()
   update_option('large_size_w', 648);
   update_option('large_size_h', 648);
 }
-add_action('after_setup_theme', 'qwel_setup');
+add_action('after_setup_theme', 'fillmignon_setup');
 
 
 // Widgets
 
-function qwel_widgets_init()
+function fillmignon_widgets_init()
 {
   register_sidebar([
     'name' => 'Blog Sidebar',
@@ -64,23 +64,23 @@ function qwel_widgets_init()
     'after_title' => '</h2>'
   ]);
 }
-add_action('widgets_init', 'qwel_widgets_init');
+add_action('widgets_init', 'fillmignon_widgets_init');
 
 
 // Scripts
 
-function qwel_scripts()
+function fillmignon_scripts()
 {
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:300|Noto+Serif+JP:300&display=swap', [], null); 
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
 }
-add_action('wp_enqueue_scripts', 'qwel_scripts');
+add_action('wp_enqueue_scripts', 'fillmignon_scripts');
 
 
 // Post
 // デフォルト投稿タイプ呼称・アイコン変更
 
-$post_name = '記事';
+$post_name = 'ブログ';
 $post_icon = 'dashicons-star-filled';
 
 function change_menulabel()
@@ -603,14 +603,14 @@ function no_image($size = 'sm')
 
 function register_excerpt_length()
 {
-  return 100;
+  return 200;
 }
 add_filter('excerpt_length', 'register_excerpt_length', 999);
 
 
 // Copyright
 
-$copyright = date('Y') . ' QWEL';
+$copyright = date('Y') . ' Kyoko Watanabe';
 
 function copyright()
 {

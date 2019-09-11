@@ -1,22 +1,28 @@
 // Front - About
 
 #front-about {
-  .about {
-    align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  .front-sec-heading {
+    margin-bottom: 3rem;
   }
 
-  .featured-image,
-  .about-intro {
-    @include col("lg", 6);
-    margin-bottom: 2rem;
+  .featured-image {
+    width: 12rem;
+    margin: 2rem auto;
   }
 
   .about-intro-text {
-    margin-bottom: 2rem;
-    text-align: justify;
+    font-family: $heading-font-family;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: .125rem;
   }
 
   .about-intro-btn {
-    @include button("lg");
+    @include button("md", "tertiary");
+    font-style: italic;
   }
 }

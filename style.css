@@ -1,9 +1,9 @@
 /*
-Theme Name: Qwel
-Version: 1.0
+Theme Name: Fillmignon
+Version: 2.0
 Author: Taigo Ito
 Author URI: https://qwel.design/
-Description: This is a theme for someone artists or craftsmen. Please customize and use.
+Description: This is a theme for Fillmignon.
 */
 *,
 *::before,
@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: #3399cc;
+  color: #ccaa00;
   text-decoration: underline;
 }
 
@@ -108,8 +108,9 @@ input, button, select, optgroup, textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #262626;
-  color: #ffffff;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #hero-content {
@@ -117,11 +118,13 @@ input, button, select, optgroup, textarea {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   text-align: center;
+  height: 33.33%;
+  color: #ffffff;
 }
 
 #site-header {
-  background-color: #d9d9d9;
-  color: #262626;
+  height: 4.75rem;
+  background: rgba(217, 217, 217, 0.5);
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -131,6 +134,100 @@ input, button, select, optgroup, textarea {
     top: 0;
     z-index: 990;
   }
+}
+
+#site-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#site-description {
+  margin-bottom: 2rem;
+}
+
+.featured-btns {
+  display: none;
+  padding-left: 0;
+  list-style: none;
+}
+
+.featured-btns li {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: .875rem;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1024px) {
+  .featured-btns {
+    display: block;
+  }
+}
+
+.featured-btn-pendants a {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 1px solid #0da6f2;
+  background-color: transparent;
+  color: #0da6f2;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.featured-btn-pendants a:hover {
+  background-color: #0da6f2;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.featured-btn-rings a {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 1px solid #ccaa00;
+  background-color: transparent;
+  color: #ccaa00;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.featured-btn-rings a:hover {
+  background-color: #ccaa00;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.featured-btn-pierces a {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 1px solid #7e47eb;
+  background-color: transparent;
+  color: #7e47eb;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.featured-btn-pierces a:hover {
+  background-color: #7e47eb;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #page-header {
@@ -154,22 +251,17 @@ input, button, select, optgroup, textarea {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
+  background-attachment: scroll;
+  -webkit-filter: none;
+          filter: none;
 }
 
 #header-navigation {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  #header-navigation {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 990;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 #header-navigation-bar {
@@ -209,12 +301,12 @@ input, button, select, optgroup, textarea {
 #header-navigation-bar .navigation-brand,
 #header-navigation-bar .navigation-menu li {
   display: inline-block;
-  height: 3rem;
-  margin: 0 1rem;
-  font-family: "Noto Sans JP", sans-serif;
+  height: 3.75rem;
+  margin: 0 2.25rem;
+  font-family: "Noto Serif JP", serif;
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 3rem;
+  font-size: 1.125rem;
+  line-height: 3.75rem;
   vertical-align: middle;
   text-transform: capitalize;
 }
@@ -227,20 +319,25 @@ input, button, select, optgroup, textarea {
 
 #header-navigation-bar .navigation-brand a:hover,
 #header-navigation-bar .navigation-menu li a:hover {
-  color: #3399cc;
+  color: #ccaa00;
   text-decoration: underline;
 }
 
 #header-navigation-bar .navigation-brand img,
 #header-navigation-bar .navigation-menu li img {
   width: auto;
-  height: 2rem;
-  margin: .5rem;
+  height: 3.75rem;
+  margin: 0;
+}
+
+#header-navigation-bar .navigation-brand .icon,
+#header-navigation-bar .navigation-menu li .icon {
+  margin: .375rem 0;
 }
 
 #navigation-toggler {
   display: inline-block;
-  height: 3rem;
+  height: 3.75rem;
   margin: 0 .5rem;
   padding: 0;
   border: 0;
@@ -252,7 +349,7 @@ input, button, select, optgroup, textarea {
 }
 
 #navigation-toggler:hover {
-  color: #3399cc;
+  color: #ccaa00;
 }
 
 @media (min-width: 1024px) {
@@ -299,7 +396,7 @@ input, button, select, optgroup, textarea {
 
 #footer-navigation .navigation-brand a:hover,
 #footer-navigation .navigation-menu li a:hover {
-  color: #3399cc;
+  color: #ccaa00;
 }
 
 #footer-navigation .navigation-brand img,
@@ -412,18 +509,42 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.front-sec:not(#front-access) {
+.front-sec:not(#front-about) {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
 
-.front-sec:not(#front-access):not(#front-gallery):nth-child(odd) {
-  background-color: #d9d9d9;
+#hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(204, 170, 0, 0.15)));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(204, 170, 0, 0.15));
 }
 
-.front-sec:not(#front-access):not(#front-gallery):nth-child(even) {
+#front-about {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(204, 170, 0, 0.15)), color-stop(rgba(71, 180, 235, 0.3)), color-stop(rgba(126, 71, 235, 0.3)), to(#fff));
+  background: linear-gradient(rgba(204, 170, 0, 0.15), rgba(71, 180, 235, 0.3), rgba(126, 71, 235, 0.3), #fff);
+  color: #ffffff;
+}
+
+#front-works {
   background-color: #ffffff;
+}
+
+#front-news {
+  background: radial-gradient(rgba(217, 217, 217, 0.3), #333333);
+}
+
+#front-news .front-sec-heading {
+  color: #ffffff;
+}
+
+#front-gallery {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+#front-contact {
+  background: radial-gradient(rgba(217, 217, 217, 0.3), #ffffff);
 }
 
 .front-sec-heading {
@@ -436,41 +557,33 @@ input, button, select, optgroup, textarea {
   padding: 0 3rem;
 }
 
-#front-about .about {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#front-about {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
-#front-about .featured-image,
-#front-about .about-intro {
-  position: relative;
-  width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-bottom: 2rem;
+#front-about .front-sec-heading {
+  margin-bottom: 3rem;
 }
 
-@media (min-width: 1024px) {
-  #front-about .featured-image,
-  #front-about .about-intro {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-  }
+#front-about .featured-image {
+  width: 12rem;
+  margin: 2rem auto;
 }
 
 #front-about .about-intro-text {
-  margin-bottom: 2rem;
-  text-align: justify;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: .125rem;
 }
 
 #front-about .about-intro-btn {
   display: inline-block;
-  padding: 0.375rem 6rem;
+  padding: 0.25rem 4rem;
   border: none;
-  background-color: #3399cc;
+  background-color: #7e47eb;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -480,10 +593,11 @@ input, button, select, optgroup, textarea {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  font-style: italic;
 }
 
 #front-about .about-intro-btn:hover {
-  background-color: #2b82ad;
+  background-color: #6625e7;
   color: #ffffff;
   text-decoration: none;
 }
@@ -551,7 +665,7 @@ input, button, select, optgroup, textarea {
 #front-news .news-intro-heading {
   display: inline-block;
   margin: .75rem 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1;
@@ -605,24 +719,6 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#front-gallery {
-  background-color: #262626;
-  color: #ffffff;
-}
-
-#front-access {
-  position: relative;
-  width: 100%;
-  height: 480px;
-}
-
-#front-access iframe {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
 #front-contact form {
   position: relative;
   width: 100%;
@@ -662,7 +758,7 @@ input, button, select, optgroup, textarea {
   display: inline-block;
   padding: 0.375rem 6rem;
   border: none;
-  background-color: #3399cc;
+  background-color: #0da6f2;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -677,7 +773,7 @@ input, button, select, optgroup, textarea {
 }
 
 #front-contact form [type="button"]:hover, #front-contact form [type="reset"]:hover, #front-contact form [type="submit"]:hover {
-  background-color: #2b82ad;
+  background-color: #0b8dce;
   color: #ffffff;
   text-decoration: none;
 }
@@ -992,7 +1088,7 @@ input, button, select, optgroup, textarea {
 
 #archive-works .work-title {
   margin: 1rem auto;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -1033,13 +1129,13 @@ input, button, select, optgroup, textarea {
 
 .pagination .page-active {
   padding: 1rem;
-  background-color: #297aa3;
+  background-color: #0a85c2;
   color: #ffffff;
 }
 
 .pagination .page-joint {
   padding: 1rem;
-  background-color: #3399cc;
+  background-color: #0da6f2;
   color: #ffffff;
 }
 
@@ -1047,7 +1143,7 @@ input, button, select, optgroup, textarea {
   display: inline-block;
   padding: 0.25rem 1rem;
   border: none;
-  background-color: #3399cc;
+  background-color: #0da6f2;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -1061,7 +1157,7 @@ input, button, select, optgroup, textarea {
 }
 
 .pagination a:hover {
-  background-color: #2b82ad;
+  background-color: #0b8dce;
   color: #ffffff;
   text-decoration: none;
 }
@@ -1089,7 +1185,7 @@ input, button, select, optgroup, textarea {
   display: inline-block;
   padding: 0.25rem 1rem;
   border: none;
-  background-color: #3399cc;
+  background-color: #0da6f2;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -1102,7 +1198,7 @@ input, button, select, optgroup, textarea {
 }
 
 .search-submit:hover {
-  background-color: #2b82ad;
+  background-color: #0b8dce;
   color: #ffffff;
   text-decoration: none;
 }
@@ -1179,7 +1275,7 @@ input, button, select, optgroup, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-weight: 400;
 }
 
@@ -1217,7 +1313,7 @@ h3, h4, h5, h6 {
 }
 
 .img-clip-inner {
-  margin-top: -10%;
+  margin-top: -5%;
   margin-left: -5%;
   margin-right: -5%;
 }
@@ -1449,7 +1545,7 @@ h3, h4, h5, h6 {
 }
 
 #slidebar a:hover {
-  color: #3399cc;
+  color: #ccaa00;
   text-decoration: underline;
 }
 
@@ -1502,6 +1598,7 @@ h3, h4, h5, h6 {
   right: 0;
   z-index: 1100;
   display: block;
+  margin: .375rem 0;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -1516,7 +1613,7 @@ h3, h4, h5, h6 {
 }
 
 #slidebar-close:hover {
-  color: #3399cc;
+  color: #ccaa00;
 }
 
 #slidebar-close.collapse {
@@ -1603,7 +1700,7 @@ h3, h4, h5, h6 {
 }
 
 .slider-prev:hover, .slider-next:hover {
-  color: #3399cc;
+  color: #ccaa00;
 }
 
 .slider-prev {

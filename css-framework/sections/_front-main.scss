@@ -1,19 +1,38 @@
 // Front - main
 
-.front-sec:not(#front-access) {
+.front-sec:not(#front-about) {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
+}
 
-  &:not(#front-gallery) {
-    &:nth-child(odd) {
-      background-color: gray(850);
-    }
+#hero {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(204, 170, 0, 0.15));
+}
 
-    &:nth-child(even) {
-      background-color: $body-bg;
-    }
+#front-about {
+  background: linear-gradient(rgba(204, 170, 0, 0.15), rgba(71, 180, 235, 0.3), rgba(126, 71, 235, 0.3), #fff);
+  color: #ffffff;
+}
+
+#front-works {
+  background-color: $body-bg;
+}
+
+#front-news {
+  background: radial-gradient(rgba(217, 217, 217, 0.3), #333333);
+
+  .front-sec-heading {
+    color: #ffffff;
   }
+}
+
+#front-gallery {
+  @include background("dark"); 
+}
+
+#front-contact {
+  background: radial-gradient(rgba(217, 217, 217, 0.3), #ffffff);
 }
 
 .front-sec-heading {

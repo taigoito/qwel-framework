@@ -1,5 +1,5 @@
     <section id="front-about" class="front-sec">
-      <h2 class="front-sec-heading">about</h2>
+      <h2 class="front-sec-heading">story</h2>
       <div class="container">
         <?php
         $posts = get_posts([

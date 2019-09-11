@@ -1,16 +1,11 @@
-    <div id="hero" <?php if (get_header_image()) echo 'style="color: #' . header_textcolor(); '"'; ?>;">
+    <div id="hero">
       <div id="hero-content">
-        <h1 id="site-title">
-          <?php
-          if (has_custom_logo()) {
-            $custom_logo_id = get_theme_mod('custom_logo');
-            $image = wp_get_attachment_image_src($custom_logo_id, 'full');
-            echo '<img src="' . $image[0] . '">';
-          } else {
-            bloginfo('name');
-          }
-          ?>
-        </h1>
+        <h1 id="site-title"><?php bloginfo('name'); ?></h1>
         <div id="site-description"><?php bloginfo('description'); ?></div>
+        <ul class="featured-btns">
+          <li class="featured-btn-pendants"><a href="./product/pendants/">pendants</a></li>
+          <li class="featured-btn-rings"><a href="./product/rings/">rings</a></li>
+          <li class="featured-btn-pierces"><a href="./product/pierces/">pierces</a></li>
+        </ul>
       </div>
     </div><!-- #hero -->

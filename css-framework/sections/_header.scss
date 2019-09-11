@@ -2,16 +2,56 @@
 
 #hero {
   @include cover-unit();
-  @include background("dark");
+  align-items: flex-end;
 }
 
 #hero-content {
   @include cover-section();
+  height: 33.33%;
+  color: #ffffff;
 }
 
 #site-header {
   @include sticky-top();
-  @include background("light");
+  height: 4.75rem; // Navigation height
+  background: rgba(217, 217, 217, .5);
+}
+
+#site-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#site-description {
+  margin-bottom: 2rem;
+}
+
+.featured-btns {
+  display: none;
+  @include list-unstyled();
+
+  li {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: .875rem;
+    text-transform: capitalize;
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    display: block;
+  }
+}
+
+.featured-btn-pendants a {
+  @include button-custom("sm", "primary");
+}
+
+.featured-btn-rings a {
+  @include button-custom("sm", "secondary");
+}
+
+.featured-btn-pierces a {
+  @include button-custom("sm", "tertiary");
 }
 
 #page-header {
@@ -24,5 +64,5 @@
 }
 
 #cover-image {
-  @include cover-image(none, blur(4px));
+  @include cover-image(none, none);
 }

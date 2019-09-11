@@ -1,9 +1,9 @@
 /*
-Theme Name: Qwel
-Version: 1.0
+Theme Name: Fillmignon
+Version: 2.0
 Author: Taigo Ito
 Author URI: https://qwel.design/
-Description: This is a theme for someone artists or craftsmen. Please customize and use.
+Description: This is a theme for Fillmignon.
 */
 
  @charset "utf-8";
@@ -14,7 +14,7 @@ Description: This is a theme for someone artists or craftsmen. Please customize 
  @import "css-framework/utilities/background";
  @import "css-framework/utilities/type";
  @import "css-framework/utilities/breadcrumb";
- @import "css-framework/utilities/buttons";
+ @import "css-framework/utilities/buttons-custom";
  @import "css-framework/utilities/cover";
  @import "css-framework/utilities/embed";
  @import "css-framework/utilities/forms";
@@ -31,7 +31,6 @@ Description: This is a theme for someone artists or craftsmen. Please customize 
  @import "css-framework/sections/front-about";
  @import "css-framework/sections/front-news";
  @import "css-framework/sections/front-gallery";
- @import "css-framework/sections/front-access";
  @import "css-framework/sections/front-contact";
  @import "css-framework/sections/page-main";
  @import "css-framework/sections/post-main";

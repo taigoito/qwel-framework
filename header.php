@@ -17,18 +17,12 @@
     const preloader = new Preloader();
   </script>
 
-  <header id="<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?>">
-    <?php
-    if (is_front_page()) {
-      get_template_part('template-parts/header/hero');
-    } else {
-      get_template_part('template-parts/header/navigation');
-    }
-    ?>
-  </header><!-- #<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?> -->
+  <header id="site-header">
+    <?php get_template_part('template-parts/header/navigation'); ?>
+  </header><!-- #site-header -->
   <?php
   if (is_front_page()) {
-    get_template_part('template-parts/header/navigation');
+    get_template_part('template-parts/header/hero');
   } else {
     get_template_part('template-parts/header/breadcrumb');
   }
