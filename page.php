@@ -1,14 +1,11 @@
 <?php get_header(); ?>
   <main id="main">
-    <header id="page-header">
-      <h1 id="page-title"><?php echo get_my_title(); ?></h1>
-    </header>
     <div class="container">
       <?php
       if (have_posts()) {
         while (have_posts()) {
           the_post();
-          //get_template_part('template-parts/contents/page');
+          get_template_part('template-parts/contents/page');
 
           $posts = get_children([
             'post_parent' => get_the_ID(),

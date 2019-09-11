@@ -40,11 +40,15 @@
 
   li {
     padding: .25rem;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: 1.25rem;
     text-transform: capitalize;
 
     img {
       width: auto;
       height: 2rem;
+      filter: brightness(100%) grayscale(100%) invert(1);
     }
   }
   

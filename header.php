@@ -14,21 +14,15 @@
   </noscript>
   <script src="<?php echo get_template_directory_uri() . '/js/preloader.js'; ?>"></script>
   <script>
-    const preloader = new Preloader();
+    const preloader = new Preloader({backgroundColor: '#002d4d'});
   </script>
 
-  <header id="<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?>">
-    <?php
-    if (is_front_page()) {
-      get_template_part('template-parts/header/hero');
-    } else {
-      get_template_part('template-parts/header/navigation');
-    }
-    ?>
-  </header><!-- #<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?> -->
+  <header id="site-header">
+    <?php get_template_part('template-parts/header/navigation'); ?>
+  </header><!-- #site-header -->
   <?php
   if (is_front_page()) {
-    get_template_part('template-parts/header/navigation');
+    get_template_part('template-parts/header/hero');
   } else {
     get_template_part('template-parts/header/breadcrumb');
   }

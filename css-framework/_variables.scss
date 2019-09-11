@@ -21,12 +21,12 @@ $container-max-widths: (
 );
 
 // Theme color
-$key-color: hsl(200, 60%, 50%);
+$key-color: hsl(205, 100%, 25%);
 $theme-colors: (
   primary:       $key-color,
   primary-light: lighten($key-color, 25%),
   primary-dark:  darken($key-color, 10%),
-  secondary:     adjust-hue($key-color, -150deg),
+  secondary:     hsl(40, 100%, 50%),
   light:         lighten(#000000, 85%),
   dark:          lighten(#000000, 15%)
 );
@@ -41,7 +41,7 @@ $link-hover-decoration: underline;
 
 // Theme Fonts
 $font-family-sans-serif: "Noto Sans JP", sans-serif;
-$font-family-serif:      "Noto Serif JP", serif;
+$font-family-serif:      "Caveat", "Noto Serif JP", sans-serif;
 $font-weight-sans-serif: 400;
 $font-weight-serif:      400;
 
@@ -52,8 +52,12 @@ $text-align-base:     justify;
 $line-height-base:    1.75;
 $letter-spacing-base: 0.04rem;
 
-$heading-font-family: $font-family-sans-serif;
-$heading-font-weight: $font-weight-sans-serif;
+$heading-font-family: $font-family-serif;
+$heading-font-weight: $font-weight-serif;
 
 $small-font-size:     87.5%;
 $small-line-height:   1.85;
+
+// Preloader
+
+$spinner-bars-bg: #ffffff;

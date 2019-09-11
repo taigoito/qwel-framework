@@ -2,32 +2,43 @@
 
 .page-sec {
   @include row();
-  margin: 6rem 0;
-  justify-content: space-around;
+  margin-bottom: 6rem;
+  justify-content: space-between;
 
-  .primary-col, .secondary-col {
+  .primary-col {
     @include col("lg", 6);
   }
 
-  .primary-col {
-    order: 2;
+  .secondary-col {
+    @include col("lg", 5);
+    text-align: center;
   }
 
-  .secondary-col {
-    order: 1;
+  .page-title {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
     text-align: center;
+  }
+
+  ul, p, img {
+    width: 36rem;
+    max-width: 100%;
+    margin: .5rem auto;
+  }
+
+  ul {
+    padding-left: 1.5rem;
   }
 
   @media (min-width: breakpoint("lg")) {
     &:nth-child(even) {
       .primary-col {
-        order: 1;
-      }
-
-      .secondary-col {
         order: 2;
+      }
+  
+      .secondary-col {
+        order: 1;
       }
     }
   }
 }
-

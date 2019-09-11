@@ -1,16 +1,16 @@
-    <div id="hero" <?php if (get_header_image()) echo 'style="color: #' . header_textcolor(); '"'; ?>;">
-      <div id="hero-content">
-        <h1 id="site-title">
-          <?php
-          if (has_custom_logo()) {
-            $custom_logo_id = get_theme_mod('custom_logo');
-            $image = wp_get_attachment_image_src($custom_logo_id, 'full');
-            echo '<img src="' . $image[0] . '">';
-          } else {
-            bloginfo('name');
-          }
-          ?>
-        </h1>
-        <div id="site-description"><?php bloginfo('description'); ?></div>
-      </div>
+    <div id="hero" class="slider">
+      <div id="hero-slider-inner" class="slider-inner">
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+        <div class="slider-item"></div>
+      </div><!-- .slider-inner -->
+      <a id="hero-slider-prev" class="slider-prev" href="#"><span data-icon="ei-chevron-left" data-size="l"></span></a>
+      <a id="hero-slider-next" class="slider-next" href="#"><span data-icon="ei-chevron-right" data-size="l"></span></a>
     </div><!-- #hero -->
+    <div id="arrow-sign">scroll down <span data-icon="ei-arrow-down"></span></div>

@@ -33,10 +33,10 @@
   order: 0;
   text-align: center;
   opacity: 1;
-  transition: opacity 0.15s linear;
+  transition: filter 0.25s linear;
   
   &:not(.active) {
-    opacity: .5;
+    filter: brightness(75%) grayscale(100%);
   }
 }
 

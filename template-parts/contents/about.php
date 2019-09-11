@@ -6,8 +6,9 @@
         <?php } ?>
         <div class="about-intro">
           <div class="about-intro-text">
-            <?php the_content(); ?>
+            <?php echo mb_substr(get_the_excerpt(), 0, 250); ?>
+            <?php /*the_content();*/ ?>
           </div>
-          <a class="about-intro-btn" href="<?php the_permalink(); ?>">詳細</a>
+          <a class="about-intro-btn" href="<?php the_permalink(); ?>">詳細を見る</a>
         </div>
       </div><!-- .about -->

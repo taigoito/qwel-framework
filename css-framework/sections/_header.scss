@@ -1,17 +1,44 @@
 // Header
 
 #hero {
-  @include cover-unit();
   @include background("dark");
+
+  @for $i from 0 through 9 {
+    .slider-item:nth-child(#{$i + 1}) {
+      width: 62.5vh;
+      height: 83.33vh;
+      background-image: url("./images/top0#{$i}.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: scroll; 
+    }
+  }
 }
 
-#hero-content {
-  @include cover-section();
+#arrow-sign {
+  @include fixed-bottom;
+  margin-bottom: .25%;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  transition: opacity .5s linear;
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+  }
+
+  &:not(.show) {
+    opacity: 0;
+  }
 }
 
 #site-header {
   @include sticky-top();
-  @include background("light");
+  height: 4rem; // Navigation height
+  background-color: rgba(217, 217, 217, .85);;
 }
 
 #page-header {

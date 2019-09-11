@@ -1,12 +1,7 @@
       <section class="page-sec">
         <div class="primary-col">
+          <h2 class="page-title"><?php the_title(); ?></h2>
           <?php the_content(); ?>
         </div>
-        <?php if (has_post_thumbnail()) { ?>
-        <div class="secondary-col">
-          <div class="featured-image">
-            <?php the_post_thumbnail('large'); ?>
-          </div>
-        </div>
-        <?php } ?>
+        <div class="secondary-col"></div>
       </section>

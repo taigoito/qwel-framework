@@ -12,4 +12,7 @@
         }
         ?>
       </div><!-- .container -->
+      <div class="link-inline-wrap">
+        <a class="link-inline" href="<?php echo get_post_type_archive_link('post'); ?>">ブログを見る</a>
+      </div>
     </section><!-- #news -->

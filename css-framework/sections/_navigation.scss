@@ -1,8 +1,7 @@
 // Navigation
 
 #header-navigation {
-  @include sticky-top();
-  background: rgba($body-bg, .7);
+  @include fixed-top();
 }
 
 #header-navigation-bar {
@@ -29,10 +28,10 @@
   .navigation-menu li {
     display: inline-block;
     height: 3rem;
-    margin: 0 1rem;
+    margin: 0 2rem;
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     vertical-align: middle;
     text-transform: capitalize;
@@ -86,6 +85,7 @@
 
     img {
       margin-left: -1rem;
+      filter: brightness(100%) grayscale(100%) invert(1);
     }
   }
 
@@ -102,6 +102,9 @@
 
   .navigation-brand,
   .navigation-menu li {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: 1.25rem;
     vertical-align: middle;
     text-transform: capitalize;
 

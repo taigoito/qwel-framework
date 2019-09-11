@@ -1,6 +1,12 @@
 // Front - About
 
 #front-about {
+  padding-bottom: 4.5rem !important;
+
+  .front-sec-heading {
+    margin-bottom: 1.5rem !important;
+  }
+
   .about {
     align-items: center;
   }
@@ -11,12 +17,26 @@
     margin-bottom: 2rem;
   }
 
+  .featured-image img {
+    max-width: 75%;
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    .featured-image {
+      order: 2;
+    }
+
+    .about-intro {
+      order: 1;
+    }
+  }
+
   .about-intro-text {
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: center;
   }
 
   .about-intro-btn {
-    @include button("lg");
+    @include button("lg", "light");
   }
 }
