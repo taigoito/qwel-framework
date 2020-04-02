@@ -3,15 +3,11 @@
 .page-sec {
   @include row();
   margin-bottom: 6rem;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 
-  .primary-col {
-    @include col("lg", 6);
-  }
-
-  .secondary-col {
+  .primary-col, .secondary-col {
     @include col("lg", 5);
-    text-align: center;
   }
 
   .page-title {

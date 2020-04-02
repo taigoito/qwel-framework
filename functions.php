@@ -28,7 +28,7 @@ function oasis_ironwork_setup()
 
   // カスタムロゴ
   add_theme_support('custom-logo');
-  
+
   // カスタムメニュー
   register_nav_menus([
     'primary' => 'Primary Menu',
@@ -71,7 +71,7 @@ add_action('widgets_init', 'oasis_ironwork_widgets_init');
 
 function oasis_ironwork_scripts()
 {
-  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Caveat|Noto+Sans+JP:300|Noto+Serif+JP:300&display=swap', [], null); 
+  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Caveat|Noto+Sans+JP:300|Noto+Serif+JP:300&display=swap', [], null);
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
 }
 add_action('wp_enqueue_scripts', 'oasis_ironwork_scripts');
@@ -242,35 +242,41 @@ function insert_works_fields()
 
 function save_works_fields($postID)
 {
-  if (!empty($_POST['material'])) {
-    update_post_meta($postID, 'material', $_POST['material']);
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+    return $postID;
+  } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
+    return $postID;
   } else {
-    delete_post_meta($postID, 'material');
-  }
-  if (!empty($_POST['finish'])) {
-    update_post_meta($postID, 'finish', $_POST['finish']);
-  } else {
-    delete_post_meta($postID, 'finish');
-  }
-  if (!empty($_POST['size'])) {
-    update_post_meta($postID, 'size', $_POST['size']);
-  } else {
-    delete_post_meta($postID, 'size');
-  }
-  if (!empty($_POST['location'])) {
-    update_post_meta($postID, 'location', $_POST['location']);
-  } else {
-    delete_post_meta($postID, 'location');
-  }
-  if (!empty($_POST['duration'])) {
-    update_post_meta($postID, 'duration', $_POST['duration']);
-  } else {
-    delete_post_meta($postID, 'duration');
-  }
-  if (!empty($_POST['price'])) {
-    update_post_meta($postID, 'price', $_POST['price']);
-  } else {
-    delete_post_meta($postID, 'price');
+    if (!empty($_POST['material'])) {
+      update_post_meta($postID, 'material', $_POST['material']);
+    } else {
+      delete_post_meta($postID, 'material');
+    }
+    if (!empty($_POST['finish'])) {
+      update_post_meta($postID, 'finish', $_POST['finish']);
+    } else {
+      delete_post_meta($postID, 'finish');
+    }
+    if (!empty($_POST['size'])) {
+      update_post_meta($postID, 'size', $_POST['size']);
+    } else {
+      delete_post_meta($postID, 'size');
+    }
+    if (!empty($_POST['location'])) {
+      update_post_meta($postID, 'location', $_POST['location']);
+    } else {
+      delete_post_meta($postID, 'location');
+    }
+    if (!empty($_POST['duration'])) {
+      update_post_meta($postID, 'duration', $_POST['duration']);
+    } else {
+      delete_post_meta($postID, 'duration');
+    }
+    if (!empty($_POST['price'])) {
+      update_post_meta($postID, 'price', $_POST['price']);
+    } else {
+      delete_post_meta($postID, 'price');
+    }
   }
 }
 add_action('save_post', 'save_works_fields');
@@ -294,7 +300,7 @@ function insert_breadcrumb()
 
     if (is_single()) {
       // 個別投稿ページ
-      $post_id = $wp_obj->ID;
+      $postID = $wp_obj->ID;
       $post_type = $wp_obj->post_type;
       $post_title = $wp_obj->post_title;
 
@@ -313,25 +319,25 @@ function insert_breadcrumb()
 
       // 投稿タイプ一覧を表示
       echo '<li>' .
-      '<a href="' . get_post_type_archive_link($post_type) . '">' .
-      get_post_type_object($post_type)->label . '一覧' .
-      '</a>' .
-      '</li>';
+        '<a href="' . get_post_type_archive_link($post_type) . '">' .
+        get_post_type_object($post_type)->label . '一覧' .
+        '</a>' .
+        '</li>';
 
-    // タクソノミーが紐づいていれば表示
-    if ($the_tax != "") {
-      $terms = get_the_terms($post_id, $the_tax); // 投稿に紐づく全タームを取得
+      // タクソノミーが紐づいていれば表示
+      if ($the_tax != "") {
+        $terms = get_the_terms($postID, $the_tax); // 投稿に紐づく全タームを取得
 
-      if (!empty($terms)) {
-        $term = $terms[0];
+        if (!empty($terms)) {
+          $term = $terms[0];
 
-        // 親タームがあれば表示
-        if ($term->parent > 0) {
-          // 親タームのIDリストを取得
-          $parent_array = array_reverse(get_ancestors($term->term_id, $the_tax));
-          foreach ($parent_array as $parent_id) {
-            $parent_term = get_term($parent_id, $the_tax);
-            echo '<li>' .
+          // 親タームがあれば表示
+          if ($term->parent > 0) {
+            // 親タームのIDリストを取得
+            $parent_array = array_reverse(get_ancestors($term->term_id, $the_tax));
+            foreach ($parent_array as $parent_id) {
+              $parent_term = get_term($parent_id, $the_tax);
+              echo '<li>' .
                 '<a href="' . get_term_link($parent_id, $the_tax) . '">' .
                 $parent_term->name .
                 '</a>' .

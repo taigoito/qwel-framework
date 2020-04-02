@@ -50,6 +50,6 @@
   font-size: 2rem;
 }
 
-#cover-image {
+#cover-image { 
   @include cover-image(none, blur(4px));
 }
