@@ -1,6 +1,6 @@
 /*
 Theme Name: Fillmignon
-Version: 2.0
+Version: 2.1
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for Fillmignon.
@@ -97,11 +97,6 @@ input, button, select, optgroup, textarea {
   width: 100%;
   height: 100vh;
   min-height: 576px;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -619,7 +614,13 @@ input, button, select, optgroup, textarea {
 }
 
 #front-news .featured-image img {
-  width: 9rem;
+  width: 6rem;
+}
+
+@media (min-width: 576px) {
+  #front-news .featured-image img {
+    width: 9rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -664,16 +665,22 @@ input, button, select, optgroup, textarea {
 
 #front-news .news-intro-heading {
   display: inline-block;
-  margin: .75rem 0;
+  margin: 0;
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   vertical-align: bottom;
 }
 
+@media (min-width: 576px) {
+  #front-news .news-intro-heading {
+    margin: .75rem 0;
+  }
+}
+
 #front-news .news-intro-terms {
-  display: inline-block;
+  display: none;
   padding-left: 0;
   list-style: none;
   vertical-align: bottom;
@@ -698,13 +705,22 @@ input, button, select, optgroup, textarea {
           user-select: none;
   cursor: pointer;
   font-size: 87.5%;
-  margin: .5rem 0;
+  margin: 0;
 }
 
 #front-news .news-intro-terms a:hover {
   background-color: #c6c6c6;
   color: #262626;
   text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  #front-news .news-intro-terms {
+    display: inline-block;
+  }
+  #front-news .news-intro-terms a {
+    margin: .5rem 0;
+  }
 }
 
 #front-news .news-intro-text {
@@ -789,9 +805,13 @@ input, button, select, optgroup, textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 6rem 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-sec .primary-col, .page-sec .secondary-col {
@@ -804,9 +824,9 @@ input, button, select, optgroup, textarea {
 @media (min-width: 1024px) {
   .page-sec .primary-col, .page-sec .secondary-col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
+    max-width: 41.66667%;
   }
 }
 
@@ -1029,7 +1049,7 @@ input, button, select, optgroup, textarea {
 
 #works .work-info {
   width: 100%;
-  line-height: 2.4;
+  line-height: 1.15;
 }
 
 #works .work-info tr {
@@ -1041,7 +1061,7 @@ input, button, select, optgroup, textarea {
 }
 
 #works .work-info th, #works .work-info td {
-  padding: 0;
+  padding: .625rem 0;
 }
 
 #works .work-title, #works .work-info, #works .work-content {
@@ -1213,9 +1233,9 @@ input, button, select, optgroup, textarea {
 }
 
 .widget li {
-  line-height: 2.4;
-  text-indent: 1rem;
+  padding: .625rem 0;
   border-bottom: 1px solid #b3b3b3;
+  line-height: 1.15;
 }
 
 .widget li:first-child {
@@ -1308,6 +1328,27 @@ h3, h4, h5, h6 {
   margin-bottom: .5rem;
 }
 
+p {
+  margin-bottom: .5rem;
+}
+
+blockquote {
+  margin-left: 1rem;
+  padding-left: .75rem;
+  border-left: 0.25rem solid #262626;
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  color: #525252;
+  font-size: 87.5%;
+}
+
 .img-clip {
   overflow: hidden;
 }
@@ -1316,6 +1357,12 @@ h3, h4, h5, h6 {
   margin-top: -5%;
   margin-left: -5%;
   margin-right: -5%;
+}
+
+.wp-block-group,
+.wp-block-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .screen-reader-text {
