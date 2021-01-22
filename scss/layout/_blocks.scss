@@ -1,0 +1,119 @@
+/* Layout Blocks
+------------------------------*/
+
+%blocks {
+  &>div {
+    @include row();
+    align-items: center;
+  }
+}
+
+%__primary {
+  @include col("lg", 6);
+}
+
+%__secondary {
+  @include col("lg", 6);
+  @media (min-width: breakpoint("lg")) {
+    padding: 0 2rem;
+  }
+}
+
+%--align-center {
+  &>div {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+%__block-inline {
+  display: inline-block;
+
+  @media (min-width: breakpoint("md")) {
+    width: 36rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    width: 24rem;
+  }
+
+  &:not(:only-child) {
+    @media (min-width: breakpoint("md")) {
+      width: 17.5rem; // Harf size with margin of only-child element
+    }
+  
+    @media (min-width: breakpoint("lg")) {
+      width: 24rem;
+    }
+  }
+}
+
+.blocks {
+  @extend %blocks;
+
+  &__primary {
+    @extend %__primary;
+
+    &--align-center {
+      @extend %__primary;
+      @extend %--align-center;
+    }
+  }
+
+  &__secondary {
+    @extend %__secondary;
+
+    &--align-center {
+      @extend %__secondary;
+      @extend %--align-center;
+    }
+  }
+
+  &__block-inline {
+    @extend %__block-inline;
+  }
+  
+  &--switched {
+    @extend %blocks;
+
+    .blocks__primary {
+      @extend %__primary;
+      order: 2;
+
+      &--align-center {
+        @extend %__primary;
+        @extend %--align-center;
+      }
+    }
+  
+    .blocks__secondary {
+      @extend %__secondary;
+      order: 1;
+
+      &--align-center {
+        @extend %__secondary;
+        @extend %--align-center;
+      }
+    }
+
+    &__block-inline {
+      @extend %__block-inline;
+    }
+  }
+
+  &--inner-section {
+    padding: 1rem;
+
+    &>div {
+      margin: 0 auto;
+      padding: 0 2rem 1rem;
+      border: .25rem dashed theme-color("primary-light");
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      padding: 2rem 3rem;
+    }
+  }
+}

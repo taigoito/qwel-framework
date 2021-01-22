@@ -1,0 +1,67 @@
+/* Utility Custom
+------------------------------*/
+
+.table {
+  @include table();
+  margin-bottom: 1rem;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  letter-spacing: $small-letter-spacing;
+}
+
+.table--plans {
+  margin: 2rem auto;
+
+  &__item {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 4px dotted theme-color("primary-light");
+
+    &:first-child {
+      border-top: 4px dotted theme-color("primary-light");
+    }
+  
+    &>div {
+      @include row();
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  h5 {
+    @include col("lg", 2); 
+    margin: 0;
+    font-weight: bold;
+    font-size: $small-font-size;
+  }
+
+  p {
+    @include col("lg", 9);
+    margin: 0;
+    font-size: $small-font-size;
+  }
+}
+
+.table-fluid {
+  width: 100%;
+  overflow: auto;
+}
+
+#select-tag {
+  display: block;
+  width: 12rem;
+  height: 2.8rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  padding-left: round($root-font-size / 2);
+  padding-right: round($root-font-size / 2);
+}
+
+#shop-list {
+  width: 59rem;
+}
+
+.shop-list-col-cat1, .shop-list-col-cat2, .shop-list-col-cat3, .shop-list-col-cat4 {
+  width: 4rem;
+  text-align: center;
+}

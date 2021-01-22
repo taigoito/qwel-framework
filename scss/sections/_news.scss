@@ -8,4 +8,8 @@
   &__heading {
     @extend %section__heading;
   }
+
+  &__text {
+    @extend %section__text;
+  }
 }

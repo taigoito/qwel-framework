@@ -5,13 +5,14 @@
   @include container();
 
   &__items {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 3.75rem;
+    margin-bottom: 3.75rem;
     @include list-unstyled();
   }
 
   &__item {
     display: inline-block;
+    margin: 0;
     text-transform: capitalize;
 
     &:not(:first-child)::before {

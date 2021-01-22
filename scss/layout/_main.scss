@@ -9,8 +9,13 @@
 
 %section__heading {
   margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+%section__text {
   margin-bottom: 6rem;
-  text-transform: capitalize;
 }
 
 .main {
@@ -37,6 +42,10 @@
     @media (min-width: breakpoint("lg")) {
       max-width: 40rem;
     }
+
+    &--page {
+      @include col("lg", 12);
+    }
   }
 
   &__secondary {
@@ -47,31 +56,4 @@
       max-width: 15rem;
     }
   }
-
-  &--works {
-    @include row();
-  
-    &__primary {
-      @include col();
-      order: 1;
-      
-      @media (min-width: breakpoint("lg")) {
-        order: 2;
-      }
-    }
-  
-    &__secondary {
-      @include col();
-      order: 2;
-      
-      @media (min-width: breakpoint("lg")) {
-        order: 1;
-      }
-    }
-  
-    &__tertiary {
-      @include col();
-      order: 3;
-    }
-  }  
 }

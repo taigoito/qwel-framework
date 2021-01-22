@@ -1,4 +1,5 @@
       <article class="article">
+        <?php if (!is_page()) { ?>
         <header class="article__header">
           <?php if (is_home() || is_singular('post') || is_post_type_archive('post') || is_category() || is_tag() || is_date() || is_author() || is_search()) { ?>
           <div class="article__date"><?php the_time('Y.m.d'); ?></div>
@@ -19,6 +20,7 @@
           </ul>
           <?php } ?>
         </header>
+        <?php } ?>
         <div class="article__content">
           <?php if (has_post_thumbnail()) { ?>
           <div class="article__image">
@@ -33,6 +35,7 @@
             <p class="article__intro"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">[read more]</a></p>
           <?php } else { ?>
             <?php the_content(); ?>
+            <?php if (is_page('shop')) get_template_part('parts/sections/shop-list'); ?>
           <?php } ?>
         </div>
         <aside class="aside">

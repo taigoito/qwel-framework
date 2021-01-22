@@ -8,8 +8,10 @@
   &__heading {
     @extend %section__heading;
   }
+}
 
-  &__form {
+.wpcf7 {
+  form {
     @include form();
   }
 }
