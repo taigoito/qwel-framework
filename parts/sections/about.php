@@ -6,7 +6,7 @@
             <h3 class="one-col__heading">聞こえてくる音がある</h3>
             <div class="one-col__intro">
               <p>風、雨、波、虫 ... 今日はどんな音と出会えるだろう</p>
-              <a class="one-col__more" href="<?php the_permalink(11); ?>">&gt; 私たちについて</a>
+              <a class="one-col__more" href="<?php the_permalink(11); ?>">&gt; いただき繕について</a>
             </div>
             <h3 class="one-col__heading">There is sound hearing</h3>
             <div class="one-col__intro">

@@ -10,21 +10,14 @@
   }
 
   &__date {
+    display: inline-block;
     margin-top: .75rem;
     margin-bottom: .75rem;
   }
 
-  &__title {
-    display: inline-block;
-    margin: .5rem 0;
-    font-size: 1.2rem;
-    line-height: 1.25; // Make 2.5rem height by margin, font-size and line-height
-    vertical-align: bottom;
-  }
-
   &__terms {
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: .125rem;
     @include list-unstyled();
     vertical-align: bottom;
   }
@@ -37,8 +30,8 @@
     a {
       display: inline-block;
       @include button("sm", "light");
-      font-size: 1rem;
-      line-height: 1.25; // Make 2.5rem height by button mixin and line-height
+      border-radius: 1rem;
+      font-size: $small-font-size;
     }
   }
 
@@ -61,10 +54,26 @@
     padding-bottom: .25rem;
     border-bottom: .25rem double theme-color("primary");
     font-size: 1.33rem;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   h4 {
     font-weight: bold;
     font-size: 1.17rem;
+  }
+
+  &__btn a {
+    display: inline-block;
+    @include button();
+    margin: 1rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+  }
+
+  p:not(.article__btn) a {
+    text-decoration: underline;
   }
 }

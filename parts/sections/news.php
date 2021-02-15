@@ -4,7 +4,7 @@
       <div class="lists">
         <?php
         $posts = get_posts([
-          'posts_per_page' => 2,
+          'posts_per_page' => 5,
           'post_type' => ['post']
         ]);
         foreach ($posts as $post) {

@@ -57,12 +57,13 @@
   &__term {
     display: inline-block;
     margin-left: .75rem;
-    margin-bottom: 0;
+    margin-bottom: .125rem;
 
     a {
       display: inline-block;
       @include button("sm", "light");
-      font-size: 1rem;
+      border-radius: 1rem;
+      font-size: $small-font-size;
       line-height: 1.25; // Make 2.5rem height by button mixin and line-height
     }
   }

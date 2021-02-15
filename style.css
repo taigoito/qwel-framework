@@ -515,21 +515,14 @@ button,
 }
 
 .article__date {
+  display: inline-block;
   margin-top: .75rem;
   margin-bottom: .75rem;
 }
 
-.article__title {
-  display: inline-block;
-  margin: .5rem 0;
-  font-size: 1.2rem;
-  line-height: 1.25;
-  vertical-align: bottom;
-}
-
 .article__terms {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: .125rem;
   padding-left: 0;
   list-style: none;
   vertical-align: bottom;
@@ -556,8 +549,8 @@ button,
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.25;
+  border-radius: 1rem;
+  font-size: 87.5%;
 }
 
 .article__term a:hover {
@@ -587,9 +580,43 @@ button,
   font-size: 1.33rem;
 }
 
+.article h3 a:hover {
+  text-decoration: none;
+}
+
 .article h4 {
   font-weight: bold;
   font-size: 1.17rem;
+}
+
+.article__btn a {
+  display: inline-block;
+  margin: auto;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background-color: #e76458;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+}
+
+.article__btn a:hover {
+  background-color: #e24536;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.article p:not(.article__btn) a {
+  text-decoration: underline;
 }
 
 /* Layout Blocks
@@ -1754,7 +1781,7 @@ button,
 .lists__term {
   display: inline-block;
   margin-left: .75rem;
-  margin-bottom: 0;
+  margin-bottom: .125rem;
 }
 
 .lists__term a {
@@ -1772,7 +1799,8 @@ button,
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  font-size: 1rem;
+  border-radius: 1rem;
+  font-size: 87.5%;
   line-height: 1.25;
 }
 
@@ -1796,6 +1824,7 @@ button,
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
+  vertical-align: middle;
   overflow: hidden;
   fill: currentColor;
 }
@@ -1812,8 +1841,8 @@ button,
 }
 
 .icon--m {
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
 }
 
 .icon--l {
@@ -2023,7 +2052,7 @@ button,
   right: 0;
   bottom: 0;
   z-index: 1100;
-  width: 18rem;
+  width: 21rem;
   height: 100%;
   margin: auto;
   background-color: rgba(77, 77, 77, 0.85);

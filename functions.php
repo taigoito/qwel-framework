@@ -335,7 +335,13 @@ function get_my_title()
   // WPオブジェクト取得
   $wp_obj = get_queried_object();
 
-  if (is_single() || is_home() || is_page()) {
+  // デフォルト投稿タイプは全て '最新情報 - News' を返す
+  if (is_home() || is_singular('post') || is_post_type_archive('post') || 
+    is_category() || is_tag() || is_date() || is_author() || is_search()) {
+    return '最新情報 - News';
+  }
+  
+  if (is_single() || is_page()) {
     // 個別投稿ページ・固定ページ
     return $wp_obj->post_title;
   } else if (is_post_type_archive()) {

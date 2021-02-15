@@ -1,4 +1,5 @@
           <h3>小売店一覧</h3>
+          <p>地域を選択してください。</p>
           <select id="select-tag" name="location">
             <option value="福井">福井</option>
             <option value="あわら">あわら</option>
