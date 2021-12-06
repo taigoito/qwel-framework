@@ -8,20 +8,45 @@
   right: 0;
   left: 0;
   z-index: 1000; // 基準
-  background-color: rgba($bodyBg, .7);
-  transition: .35s ease-in-out all;
+  //background-color: rgba($bodyBg, .7);
+  //transition: .35s ease-in-out all;
 
-  &:hover {
-    background-color: rgba($bodyBg, 1);
-  }
+  //&:hover {
+  //  background-color: rgba($bodyBg, 1);
+  //}
 
   &__container {
     @include container();
-    @include row(flex-start);
+    @include row(space-between);
     height: $headerHeight;
+  }
+
+  &__inner {
+    display: none;
 
     @media (min-width: breakpoint("lg")) {
-      justify-content: center;
+      @include row(space-between);
+      width: 54rem;
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    &.--telTo {
+      width: 10.5rem;
+      height: 2rem;
+    }
+
+    &.--mailTo {
+      width: 7rem;
+      margin-left: .75rem;
+      padding: .375rem 1.5rem;
+      border: 1px solid themeColor("lightest");
+      border-radius: 1.5rem;
+    }
+
+    &:hover {
+      opacity: .7;
     }
   }
 }

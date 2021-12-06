@@ -6,7 +6,7 @@ $rootFontSize:     16px;
 $rootFontSizeXs:   3.84vw; // 4vw以下推奨
 
 // 基準幅 (最大24rem推奨)
-$base:             22.5rem;
+$base:             24rem;
 $breakpointBase:   300px;
 $containerBase:    var(--container-base, #{$base});
 
@@ -117,7 +117,7 @@ $sliderHeights:       (
 }
 
 // .header, .siteBrand, .hero, .preloaderの高さ
-$siteBrandHeight:  var(--site-brand-height, 48px);
-$headerHeight:     calc(#{$siteBrandHeight} + 24px);
+$siteBrandHeight:  var(--site-brand-height, 32px);
+$headerHeight:     calc(#{$siteBrandHeight} + 48px);
 $heroHeight:       var(--cover-height, 75vh);
 $preloaderHeight:  calc(var(--header-height, 72px) * 2 + #{$heroHeight});

@@ -2,6 +2,23 @@
  * Project - Pages
  */
 
+/** Front page */
+
+.coverText {
+  position: absolute;
+  left: 0;
+  bottom: .75rem;
+  width: 100%;
+  margin: auto;
+  color: themeColor("lightest");
+  font-family: monospace;
+  text-align: center;
+
+  &__large {
+    font-size: 2rem;
+  }
+}
+
 .post.--page {
   position: relative;
   width: 100%;

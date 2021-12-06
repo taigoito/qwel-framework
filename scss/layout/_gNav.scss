@@ -3,13 +3,10 @@
  */
 
 .gNav {
-  display: none;
   height: $siteBrandHeight;
 
-  &:not(.--hidden) { // 設定によってheaderが有効のとき
-    @media (min-width: breakpoint("lg")) {
-      @include row();
-    }
+  @media (min-width: breakpoint("lg")) {
+    @include row();
   }
 
   &__primaryMenu, &__socialMenu {
@@ -19,20 +16,26 @@
   
     li  {
       margin-bottom: 0;
+      border-left: 2px solid themeColor("lightest");
       
       a {
         display: block;
-        margin-left: .375rem; // 項目に合わせて適宜に調整
-        text-transform: capitalize;
+        padding: .25rem 1.5rem;
+        color: themeColor("lightest");
+        font-family: monospace;
+        font-weight: bold;
+        text-transform: uppercase;
         line-height: 1;
+        transition: opacity .35s ease-in-out;
 
-        @at-root .gNav__primaryMenu li a {
-          padding: 1rem; // socialMenu内に入るアイコンと高さを揃える
+        &:hover {
+          text-decoration: none;
+          opacity: .7;
         }
       }
 
-      &:first-child a {
-        margin-left: 1.5rem;
+      &:first-child {
+        border-left: 0;
       }
     }
   }

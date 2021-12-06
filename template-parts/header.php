@@ -7,12 +7,16 @@
        */
       get_template_part('template-parts/siteBrand');
       ?><!-- #siteBrand-->
-      <?php
-      /**
-       * G Nav
-       * テーマ設定を読み込み、表示する項目を選択
-       */
-      get_template_part('template-parts/gNav');
-      ?><!-- #gNav -->
+      <div class="header__inner">
+        <?php
+        /**
+         * G Nav
+         * 
+         */
+        get_template_part('template-parts/gNav');
+        ?><!-- #gNav -->
+        <a class="header__btn --telTo" href="#"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_tel.svg'; ?>"></a>
+        <a class="header__btn --mailTo" href="#"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_mail.svg'; ?>"></a>
+      </div>
     </div>
   </header><!-- #header -->
