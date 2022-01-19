@@ -28,12 +28,10 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "layout/siteBrand";
 @import "layout/gNav";
 @import "layout/main";
-@import "layout/titleArea";;
 @import "layout/sidebar";
 @import "layout/footer";
 
 // Objects
-@import "objects/projects/sections";
 @import "objects/projects/pages";
 @import "objects/projects/posts";
 @import "objects/projects/archive";
