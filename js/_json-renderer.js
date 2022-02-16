@@ -33,13 +33,9 @@ export default class JSONRenderer {
   }
 
   async init() {
-    this._data = await this._fetchJSON(this._url);
+    const res = await fetch(this._url);
+    this._data = await res.json();
     this._sort('id');
-  }
-
-  async _fetchJSON(url) {
-    const resp = await fetch(url, { method: "POST" });
-    return resp.json();
   }
 
   _renderTemplate(data) {
@@ -48,7 +44,7 @@ export default class JSONRenderer {
     for (let i = 0; i < len; i++) {
       const tr = document.importNode(this._template.content, true);
       tr.querySelector(`.${this._tableName}-col-name`).textContent = data[i].name;
-      tr.querySelector(`.${this._tableName}-col-address`).textContent = data[i].address;
+      tr.querySelector(`.${this._tableName}-col-comment`).textContent = data[i].comment;
       tr.querySelector(`.${this._tableName}-col-cat1`).textContent = data[i].cat1 ? '◯' : '-';
       tr.querySelector(`.${this._tableName}-col-cat2`).textContent = data[i].cat2 ? '◯' : '-';
       tr.querySelector(`.${this._tableName}-col-cat3`).textContent = data[i].cat3 ? '◯' : '-';

@@ -2453,11 +2453,14 @@ button,
 }
 
 #shop-list {
-  width: 59rem;
+  width: 54rem;
+}
+
+.shop-list-col-name {
+  width: 18rem;
 }
 
 .shop-list-col-cat1, .shop-list-col-cat2, .shop-list-col-cat3, .shop-list-col-cat4 {
   width: 4rem;
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
