@@ -28,17 +28,21 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "layout/siteBrand";
 @import "layout/gNav";
 @import "layout/main";
+@import "layout/titleArea";
 @import "layout/sidebar";
 @import "layout/footer";
 
 // Objects
+@import "objects/projects/sections";
 @import "objects/projects/pages";
 @import "objects/projects/posts";
+@import "objects/projects/opening";
 @import "objects/projects/archive";
 @import "objects/projects/widgets";
 @import "objects/projects/widgets/searchForm";
 @import "objects/projects/widgets/subMenu";
 @import "objects/projects/widgets/calendar";
+@import "objects/projects/theme";
 @import "objects/components/breadcrumb";
 @import "objects/components/cards";
 @import "objects/components/cover";

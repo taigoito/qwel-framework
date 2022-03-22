@@ -4,26 +4,47 @@
 
 .cover {
   position: fixed;
-  top: 0;
   left: 0;
-  z-index: -1;
+  bottom: 0;
+  z-index: -100;
   width: 100%;
   height: 100%;
 
-  &__image {
+  &__background {
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background: url("./assets/cover.jpg") no-repeat center center / cover scroll;
-    opacity: 1;
-    transition: 1s linear opacity;
+  }
 
-    &.--fade {
-      opacity: 0;
-      transition: none;
-    }
+  &__gradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, themeColor("primary-dark") 50%, themeColor("secondary") 51%);
+    mix-blend-mode: multiply;
+  }
+
+  &__sectionFocus {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+  }
+
+  &__pointerFocus {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
   }
 
   &__video {

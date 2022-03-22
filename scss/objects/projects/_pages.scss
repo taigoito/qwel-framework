@@ -2,23 +2,6 @@
  * Project - Pages
  */
 
-/** Front page */
-
-.coverText {
-  position: absolute;
-  left: 0;
-  bottom: .75rem;
-  width: 100%;
-  margin: auto;
-  color: themeColor("lightest");
-  font-family: monospace;
-  text-align: center;
-
-  &__large {
-    font-size: 2rem;
-  }
-}
-
 .post.--page {
   position: relative;
   width: 100%;
@@ -26,8 +9,458 @@
   padding-bottom: 3rem;
 
   & .post {
+    &__heading {
+      font-size: 1rem;
+      line-height: 1.15;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__headingLarge {
+      display: block;
+      font-weight: bold;
+      font-size: 500%;
+    }
+
+    &__headingSmall {
+      display: block;
+      font-weight: bold;
+      font-size: 100%;
+      letter-spacing: .75em;
+
+      .--textdec_left, .--textdec_right {
+        width: 6em;
+      }
+
+      .--text_gradient {
+        margin-left: .75em; // letter-spacing
+      }
+    }
+
     &__content {
       text-align: justify;
+    }
+  }
+}
+
+.pageSection {
+  font-weight: bold;
+  text-align: center;
+
+  &__heading {
+    //margin: 6rem auto 3rem;
+    margin: 9rem auto 3rem; // SectionFocusのためセクション間の余白多めに
+    font-weight: bold;
+    font-size: $h2FontSize;
+    line-height: 1.15;
+    letter-spacing: .375em;
+
+    &:before, &:after {
+      content: "/";
+      margin: 0 .75em;
+    }
+  }
+
+  &__subheading {
+    //margin: 3rem auto 1.5rem;
+    margin: 6rem auto 1.5rem; // SectionFocusのためセクション間の余白多めに
+    font-weight: bold;
+    font-size: $h3FontSize;
+    line-height: 1.15;
+    letter-spacing: .375em;
+
+    &::first-letter {
+      margin-left: .375rem; // letter-spacing
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 6rem;
+  }
+
+  // lead.--largeText_serviceをwrap
+  &__intro {
+    margin: 3rem calc(50% - 50vw);
+  }
+
+  &__lead {
+    margin-top: -1.5rem;
+    font-size: $h3FontSize;
+
+    &.--largeText_service {
+      position: relative;
+      width: 22.5rem;
+      margin: 0 auto;
+
+      @media (min-width: breakpoint("sm")) {
+        width: 37.5rem;
+      }
+
+      @media (min-width: breakpoint("md")) {
+        width: 45rem;
+      }
+
+      & strong > span {
+        display: block;
+        font-size: 1.67rem;
+
+        @media (min-width: breakpoint("sm")) {
+          font-size: 2.5rem
+        }
+
+        @media (min-width: breakpoint("md")) {
+          font-size: 3.33rem; // 53.33px
+          //font-size: 3.75rem; // 60px
+        }
+
+        &:first-child {
+          font-size: .67rem;
+
+          @media (min-width: breakpoint("sm")) {
+            font-size: 1rem;
+          }
+
+          @media (min-width: breakpoint("md")) {
+            font-size: 1.33rem;
+            //font-size: 1.5rem; // 24px -> 21.33px (88.88%)
+          }
+        }
+
+        & > span {
+          &.--small{
+            font-size: 1.17rem;
+
+            @media (min-width: breakpoint("sm")) {
+              font-size: 1.75rem;
+            }
+
+            @media (min-width: breakpoint("md")) {
+              font-size: 2.33rem; // 37.33px
+              //font-size: 2.625rem; // 42px
+            }
+          }
+
+          &.--ls_shorten {
+            letter-spacing: -.6rem;
+
+            @media (min-width: breakpoint("sm")) {
+              letter-spacing: -.9rem;
+            }
+
+            @media (min-width: breakpoint("md")) {
+              letter-spacing: -1.167rem; // -18.66px
+              //letter-spacing: -1.3125rem; // -21px
+            }
+          }
+        }
+      }
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        width: .25rem;
+        height: 3rem;
+        background: linear-gradient(180deg, themeColor("primary"), themeColor("secondary"));
+
+        @media (min-width: breakpoint("sm")) {
+          width: .375rem;
+          height: 5rem;
+        }
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+
+      strong {
+        display: block;
+        padding: .75rem 0 1.5rem;
+
+        &::before, &::after {
+          content: "";
+          position: absolute;
+          width: 4rem;
+          height: .25rem;
+          background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+
+          @media (min-width: breakpoint("sm")) {
+            width: 6.25rem;
+            height: .375rem;
+          }
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &.--passion > span {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        margin: 0;
+        background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+      }
+
+      .--display_inlineBlock {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__sub {
+    @include row(space-around, flex-start);
+
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    @include col();
+    @include col("md", 4);
+    padding-left: .75rem;
+    padding-right: .75rem;
+
+    p {
+      margin: 1.5rem 0;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 1.5rem; // reset
+      }
+
+      @media (min-width: breakpoint("md")) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+        margin-top: .75rem;
+        font-size: $smallFontSize;
+      }
+    }
+
+    @at-root .pageSection__sub:nth-child(odd) .pageSection__content {
+      @media (min-width: breakpoint("md")) {
+        order: 2;
+      }
+    } 
+  }
+
+  &__title {
+    &.--serviceElement {
+      margin: 0;
+      font-weight: bold;
+      font-size: 2.67rem;
+      text-align: center;
+
+      @media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+        font-size: 2rem;
+      }
+
+      .pageSection {
+        &__titleSpan1 {
+          position: relative;
+          display: block;
+          letter-spacing: .625em;
+          
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            margin: 0;
+            background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+          }
+        }
+
+        &__titleSpan2 {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 4rem;
+
+          @media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+            height: 3rem;
+          }
+          
+          & > span {
+            position: absolute;
+            top: 0;
+            left: -50%;
+            right: -50%;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            width: 200%;
+            height: 4rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            transform: scaleX(62.5%);
+
+            @media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+              height: 3rem;
+            }
+          }
+        }
+
+        &__titleSpan3 {
+          display: block;
+          margin-top: -.5rem;
+          font-size: 33.33%;
+          letter-spacing: .375em;
+        }
+      }
+    }
+
+    &.--serviceCase {
+      margin: 0;
+      font-weight: bold;
+      font-size: 2.67rem;
+      text-align: left;
+
+      @media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+        font-size: 2rem;
+      }
+      
+      .pageSection {
+        &__titleSpan1 {
+          display: block;
+          font-size: 1rem;
+        }
+
+        &__titleSpan2 {
+          position: relative;
+          display: block;
+        
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            margin: 0;
+            background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+          }
+
+        }
+      }
+    }
+
+    .--dispatch {
+      color: #2967b2;
+    }
+
+    .--tech {
+      color: #2ca98a;
+    }
+
+    .--logistics {
+      color: #e68939;
+    }
+  }
+
+  &__figure {
+    max-width: 100%;
+
+    &.--artwork_service {
+      width: 48rem;
+      margin: 3rem auto;
+      //opacity: .85;
+    }
+
+    &.--grid_4 {
+      @include col("xs", 6);
+      @include col("md", 4);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+  }
+
+  &__tableWrap {
+    width: 48rem;
+    max-width: 100%;
+    margin: auto;
+    overflow-x: auto;
+  }
+
+  &__table {
+    @include table();
+    min-width: 32rem;
+
+    th {
+      padding-left: 3em;
+      background-color: #eeeeee;
+      mix-blend-mode: multiply;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td {
+      padding-left: 3em;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+
+  a {
+    &.--dispatch {
+      color: #2967b2;
+      font-size: $h2FontSize;
+      text-decoration: underline;
+    }
+
+    &.--tech {
+      color: #2ca98a;
+      font-size: $h2FontSize;
+      text-decoration: underline;
+    }
+
+    &.--logistics {
+      color: #e68939;
+      font-size: $h2FontSize;
+      text-decoration: underline;
+    }
+  }
+
+  & > section {
+    &:not(.--fadeIn) {
+      opacity: 0;
+      transform: translateY(50%);
+      transition: all ease-in-out 1s;
+    }
+
+    &.--fadeIn {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all ease-in-out 1s;
     }
   }
 }

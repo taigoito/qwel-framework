@@ -24,7 +24,8 @@ $fontSizes:            (
 // body
 $fontFamilyBase:       $fontFamilySansSerif;
 $fontWeightBase:       $fontWeightSansSerif;
-$lineHeightBase:       28.8 / ($rootFontSize / ($rootFontSize * 0 + 1)); // 単位除去
+$lineHeightBase:       2;
+//$lineHeightBase:       28.8 / ($rootFontSize / ($rootFontSize * 0 + 1)); // 単位除去
 $letterSpacingBase:    0;
 
 // セクション

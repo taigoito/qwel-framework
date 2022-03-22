@@ -8,6 +8,22 @@
 import Preloader from './preloader.js';
 new Preloader();
 
+// Opening
+import Opening from './opening.js';
+new Opening();
+
+// Pointer Focus
+import PointerFocus from './pointerFocus.js';
+new PointerFocus();
+
+// Section Focus
+import SectionFocus from './sectionFocus.js';
+new SectionFocus();
+
+// Section Fade In
+import SectionFadeIn from './sectionFadeIn.js';
+new SectionFadeIn();
+
 // Drawer Menu
 import DrawerMenu from './drawerMenu.js';
 new DrawerMenu();

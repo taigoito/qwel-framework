@@ -1,0 +1,87 @@
+/**
+ * Project - Theme Utilities
+ */
+
+.--text_gradient {
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.--textdec_left, .--textdec_right {
+  position: relative;
+  display: inline-block;
+  height: 1px;
+  background: linear-gradient(90deg, themeColor("primary"), themeColor("secondary"));
+  vertical-align: middle;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: themeColor("secondary");
+  }
+}
+
+.--textdec_left::before {
+  right: 0;
+}
+
+.--textdec_right::before {
+  left: 0;
+}
+
+.--textdec_bottom {
+  position: relative;
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, themeColor("primary") 50%, themeColor("secondary") 51%);
+
+  &.--w_4 {
+    width: 6em;
+  }
+
+  &.--w_6 {
+    width: 9em;
+  }
+
+  &.--w_7 {
+    width: 10.5em;
+  }
+
+  &.--w_10 {
+    width: 15em;
+  }
+
+  &.--w_18 {
+    width: 22.5rem;
+
+    @media (min-width: breakpoint("sm")) {
+      width: 27em;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(90deg, themeColor("primary") 50%, themeColor("secondary") 51%);
+
+  }
+}

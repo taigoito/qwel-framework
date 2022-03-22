@@ -19,4 +19,7 @@
         <a class="header__btn --mailTo" href="#"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_mail.svg'; ?>"></a>
       </div>
     </div>
+    <?php if (!is_front_page()) { ?>
+      <div class="header__cover"></div>
+    <?php } ?>
   </header><!-- #header -->
