@@ -12,18 +12,34 @@
     margin-bottom: 0;
     padding-top: .75rem;
     padding-bottom: .75rem;
-    border-bottom: 1px solid themeColor("lighter");
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: 1.5rem;
+      background: linear-gradient(90deg, themeColor("primary") 25%, themeColor("secondary") 75%);
+    }
 
     @at-root .list.--lg .post:first-child {
       @media (min-width: breakpoint("lg")) {
         padding-top: .75rem;
-        border-top: 1px solid themeColor("lighter");
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          margin-bottom: 1.5rem;
+          background: linear-gradient(90deg, themeColor("primary") 25%, themeColor("secondary") 75%);
+        }
       }
     }
   }
 
   .post__inner {
-    @include row(space-around);
+    @include row(space-between);
   }
 
   .post__image {

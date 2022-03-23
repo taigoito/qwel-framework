@@ -28,10 +28,10 @@ trait Style {
       '--lg-font-size'         => self::get_data('style', 'h3_font_size'),
       '--md-font-size'         => self::get_data('style', 'h4_font_size'),
       // フォント設定
-      '--font-family-base'     => '"游ゴシック", "Yu Gothic", sans-serif',
-      '--font-weight-base'     => 500,
-      '--heading-font-family'  => '"游明朝", "Yu Mincho", serif',
-      '--heading-font-weight'  => 400,
+      '--font-family-base'     => '"Noto Sans JP", sans-serif',
+      '--font-weight-base'     => 400,
+      '--heading-font-family'  => '"Noto Sans JP", sans-serif',
+      '--heading-font-weight'  => 500,
       // 画像アスペクト比
       '--list-aspect-ratio'    => self::get_data('style', 'list_aspect_ratio'),
       '--card-aspect-ratio'    => self::get_data('style', 'card_aspect_ratio'),

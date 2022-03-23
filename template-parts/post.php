@@ -13,11 +13,6 @@
                       <div class="post__textContent">
                         <?php
                         /**
-                         * .post__date
-                         */
-                        get_template_part('template-parts/post/date');
-
-                        /**
                          * .post__heading
                          */
                         get_heading('h3');
@@ -31,6 +26,13 @@
                          * .post__excerpt
                          */
                         get_template_part('template-parts/post/excerpt');
+                        
+                        /**
+                        * .post__date
+                        */
+                        get_template_part('template-parts/post/date');
+
+                       
                         ?>
                       </div>
                     </div>

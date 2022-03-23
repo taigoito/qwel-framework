@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Product Meister
 Description: This is a theme for Product Meister.
@@ -34,8 +33,8 @@ body {
   margin: 0;
   background-color: white;
   color: #262626;
-  font-family: var(--font-family-base, "游ゴシック", "Yu Gothic", sans-serif);
-  font-weight: var(--font-weight-base, 500);
+  font-family: var(--font-family-base, "Noto Sans JP", sans-serif);
+  font-weight: var(--font-weight-base, 400);
   line-height: 2;
   letter-spacing: 0;
   -webkit-text-size-adjust: 100%;
@@ -44,7 +43,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  font-family: var(--heading-font-family, "游ゴシック", "Yu Gothic", sans-serif);
+  font-family: var(--heading-font-family, "Noto Sans JP", sans-serif);
   font-weight: var(--heading-font-weight, 500);
 }
 
@@ -149,7 +148,7 @@ table {
 }
 
 th {
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -1014,7 +1013,7 @@ body.--loaded .section.--hero .section__content {
 
 .post.--page .post__headingLarge {
   display: block;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 500%;
 }
 
@@ -2496,13 +2495,30 @@ body.--loaded .section.--hero .section__content {
   margin-bottom: 0;
   padding-top: .75rem;
   padding-bottom: .75rem;
-  border-bottom: 1px solid #d9d9d9;
+}
+
+.list .post::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 1.5rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #d3171a), color-stop(75%, #1b3168));
+  background: linear-gradient(90deg, #d3171a 25%, #1b3168 75%);
 }
 
 @media (min-width: 1200px) {
   .list.--lg .post:first-child {
     padding-top: .75rem;
-    border-top: 1px solid #d9d9d9;
+  }
+  .list.--lg .post:first-child::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 1.5rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #d3171a), color-stop(75%, #1b3168));
+    background: linear-gradient(90deg, #d3171a 25%, #1b3168 75%);
   }
 }
 
@@ -2512,8 +2528,9 @@ body.--loaded .section.--hero .section__content {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

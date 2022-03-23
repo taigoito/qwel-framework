@@ -7,7 +7,7 @@ namespace Qwel_Theme;
 trait Scripts {
   public static function enqueue_scripts() {
     // Google Fonts
-		$family = 'Noto+Sans+JP:400,700|Noto+Serif+JP:400,700';
+		$family = 'Noto+Sans+JP:400,500,700';
     if ($family !== '') {
       wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=' . $family . '&display=swap', [], null); 
     }
