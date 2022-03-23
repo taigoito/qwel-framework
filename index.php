@@ -44,6 +44,25 @@
           ?>
         </article>
       </div>
+      <div class="liveSection">
+        <article class="post --page --liveSection">
+          <h1 class="post__heading">
+            <span class="post__headingLarge">
+              <span class=" --text_gradient">live video</span>
+            </span>
+            <span class="post__headingSmall">
+              <span class="--textdec_left"></span><span class="--text_gradient">工場内ライブビデオ</span><span class="--textdec_right"></span>
+            </span>
+          </h1>
+          <div class="liveSection__wrapper">
+            <div class="liveSection__container"> 
+              <div class="liveSection__videoFrame">
+                <iframe class="liveSection__liveVideo" width="560" height="315" src="https://www.youtube.com/embed/5TEpC4WZgVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </main><!-- #main -->
 <?php get_footer();

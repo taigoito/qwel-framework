@@ -995,6 +995,115 @@ body.--loaded .section.--hero .section__content {
 }
 
 /**
+ * Project - Live Section
+ */
+.liveSection__wrapper {
+  background: linear-gradient(135deg, #d3171a 35%, #1b3168 65%);
+}
+
+.liveSection__container {
+  position: relative;
+  width: calc(var(--container-base, 18.75rem) * 4 / 3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .liveSection__container {
+    width: calc(var(--container-base, 18.75rem) * 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .liveSection__container {
+    width: calc(var(--container-base, 18.75rem) * 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .liveSection__container {
+    width: calc(var(--container-base, 18.75rem) * 4);
+  }
+}
+
+.liveSection__videoFrame {
+  position: relative;
+  width: 22.5rem;
+  height: 15rem;
+  margin: 0 auto;
+}
+
+.liveSection__videoFrame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 21.25rem;
+  height: 15rem;
+  margin: auto;
+  background: url("./assets/videoframe.png") no-repeat 0 0/contain scroll;
+}
+
+.liveSection__liveVideo {
+  display: block;
+  width: 21.25rem;
+  height: 14.0625rem;
+  margin: 0;
+  padding: 1.875rem 0.625rem 1.875rem 1.875rem;
+}
+
+@media (min-width: 600px) {
+  .liveSection__videoFrame {
+    width: 33.75rem;
+    height: 22.5rem;
+  }
+  .liveSection__videoFrame::before {
+    width: 31.875rem;
+    height: 22.5rem;
+  }
+  .liveSection__liveVideo {
+    width: 31.875rem;
+    height: 21.09375rem;
+    padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .liveSection__videoFrame {
+    width: 54rem;
+    height: 36rem;
+  }
+  .liveSection__videoFrame::before {
+    width: 51rem;
+    height: 36rem;
+  }
+  .liveSection__liveVideo {
+    width: 51rem;
+    height: 33.75rem;
+    padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .liveSection__videoFrame {
+    width: 72rem;
+    height: 48rem;
+  }
+  .liveSection__videoFrame::before {
+    width: 68rem;
+    height: 48rem;
+  }
+  .liveSection__liveVideo {
+    width: 68rem;
+    height: 45rem;
+    padding: 6rem 2rem 6rem 6rem;
+  }
+}
+
+/**
  * Project - Pages
  */
 .post.--page {
@@ -1002,6 +1111,10 @@ body.--loaded .section.--hero .section__content {
   width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.post.--page.--liveSection {
+  padding-bottom: 0;
 }
 
 .post.--page .post__heading {

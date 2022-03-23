@@ -1,0 +1,96 @@
+/**
+ * Project - Live Section
+ */
+
+.liveSection {
+  &__wrapper {
+    background: linear-gradient(135deg, #d3171a 35%, #1b3168 65%);
+  }
+
+  &__container {
+    @include container();
+  }
+  
+  &__videoFrame {
+    position: relative;
+    width: 22.5rem;
+    height: 15rem;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      width: 21.25rem;
+      height: 15rem;
+      margin: auto;
+      background: url("./assets/videoframe.png") no-repeat 0 0 / contain scroll;
+    }
+  }
+
+  &__liveVideo {
+    display: block;
+    width: 21.25rem;
+    height: 14.0625rem;
+    margin: 0;
+    padding: 1.875rem 0.625rem 1.875rem 1.875rem;
+  }
+
+  @media (min-width: breakpoint("sm")) {
+    &__videoFrame {
+      width: 33.75rem;
+      height: 22.5rem;
+
+      &::before {
+        width: 31.875rem;
+        height: 22.5rem;
+      }
+    }
+
+    &__liveVideo {
+      width: 31.875rem;
+      height: 21.09375rem;
+      padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+    }
+  }
+
+  @media (min-width: breakpoint("md")) {
+    &__videoFrame {
+      width: 54rem;
+      height: 36rem;
+
+      &::before {
+        width: 51rem;
+        height: 36rem;
+      }
+    }
+
+    &__liveVideo {
+      width: 51rem;
+      height: 33.75rem;
+      padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+    }
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    &__videoFrame {
+      width: 72rem;
+      height: 48rem;
+
+      &::before {
+        width: 68rem;
+        height: 48rem;
+      }
+    }
+
+    &__liveVideo {
+      width: 68rem;
+      height: 45rem;
+      padding: 6rem 2rem 6rem 6rem;
+    }
+  }
+}
