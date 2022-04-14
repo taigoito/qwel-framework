@@ -31,7 +31,7 @@
   &__cover {
     @include cover-image(url("./images/main_01.jpg"), blur(2px));
 
-    &--about {
+    &--about, &--access {
       @include cover-image(url("./images/main_00.jpg"), blur(2px));
     }
 

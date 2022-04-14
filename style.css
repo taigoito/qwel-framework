@@ -259,7 +259,7 @@ button,
           filter: blur(2px);
 }
 
-.site-header__cover--about {
+.site-header__cover--about, .site-header__cover--access {
   position: absolute;
   top: 0;
   left: 0;
@@ -2278,6 +2278,21 @@ button,
 
 .link-youtube:hover {
   opacity: .7;
+}
+
+/**
+ * Utility - Table
+ */
+.wp-block-table > table {
+  width: 100%;
+}
+
+.wp-block-table > table tr {
+  border-top: 1px solid #b3b3b3;
+}
+
+.wp-block-table > table th, .wp-block-table > table td {
+  padding: .625rem 0;
 }
 
 /* Utility Widgets
