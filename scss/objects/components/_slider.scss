@@ -5,16 +5,8 @@
 .slider {
   position: relative;
   width: 100%;
-  height: calc(83.33vmin * #{$sliderAspectRatio});
+  height: 12vh;
   overflow: hidden;
-
-  @media (min-width: breakpoint("md")) {
-    @each $key, $height in $sliderHeights {
-      &.--#{$key} {
-        height: $height;
-      }
-    }
-  }
 
   &__inner {
     display: flex;
@@ -26,10 +18,11 @@
   }
 
   .post {
-    position: relative;
     flex: 0 1 auto; 
     order: 0;
+    width: 42vh;
     margin: 0;
+    padding: 0 1rem;
     opacity: 1;
     transition: opacity 0.15s linear;
     
@@ -38,19 +31,15 @@
     }
   }
 
+  .post__inner {
+    display: flex;
+    align-items: stretch;
+  }
+
   .post__image {
-    width: 83.33vmin;
-    height: calc(83.33vmin * #{$sliderAspectRatio});
+    width: 16vh;
+    height: 12vh;
     margin: 0;
-    
-    @each $key, $width in $sliderWidths {
-      @at-root .slider.--#{$key}.--fit .post__image {
-        @media (min-width: breakpoint("md")) {
-          width: $width;
-          height: map-get($sliderHeights, $key);
-        }
-      }
-    }
   
     img {
       width: 100%;
@@ -67,19 +56,14 @@
   }
 
   .post__textContent {
-    position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
-    bottom: .75rem;
-    padding: .75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    padding: 0 .75rem;
     background-color: rgba(themeColor("lightest"), .7);
     color: $bodyColor;
     text-align: left;
-
-    &:hover {
-      background-color: rgba(themeColor("lightest"), .85);
-      color: $bodyColor;
-    }
   }
 
   .post__date {
@@ -96,7 +80,7 @@
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: $h4FontSize;
+    font-size: $h6FontSize;
     text-transform: capitalize;
   }
 

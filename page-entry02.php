@@ -63,7 +63,15 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="container">
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
-<div class="top">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
+<!--<div class="top">
 <h3 class="entryTtl">検査・選別作業</h3>
 <p>□ センサー内部製品（マグネット・車載用）の焼成工程での業務となります。<br />
 <br />
@@ -138,17 +146,17 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <h4 class="subTtl">職場環境</h4>
 <div class="row">
 <div class="col-md-4 col-sm-6">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img05.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img05.png'; ?>" class="img-responsive center-block">
 <h5>キャリアアップ制度</h5>
 <p>当社ではキャリアアップ制度として人事評価を実施しております。個人目標と会社要望のギャップを埋め、互いに相乗効果もたらす仕組みを実施しております。</p>
 </div>
 <div class="col-md-4 col-sm-6">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img06.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img06.png'; ?>" class="img-responsive center-block">
 <h5>1日の業務の流れ</h5>
 <p>実勤務時間は8時間10分と短いため、プライベートの時間が多く取れるのが魅力的です。</p>
 </div>
 <div class="col-md-4 col-sm-6">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img07.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img07.png'; ?>" class="img-responsive center-block">
 <h5>事業所離職率</h5>
 <p>生産が安定している現場であり、勤続年数3年以上の社員が7割勤務していますので、社員同士のコミュニケーションも良く働きやすい環境となっています。</p>
 </div>
@@ -157,7 +165,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="staff">
 <h4 class="subTtl">先輩の声</h4>
 <div class="row">
-<div class="col-md-3 col-sm-4"><img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img08.jpg'; ?>" class="img-responsive center-block"></div>
+<div class="col-md-3 col-sm-4"><img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img08.jpg'; ?>" class="img-responsive center-block"></div>
 <div class="col-md-9 col-sm-8">
 <h5>製造業が未経験でも『チャンス』はあります！</h5>
 <p class="bbTxt">請負第二事業所　事業所責任者<br />
@@ -270,7 +278,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <input type="submit" name="ACMS_POST_Form_Confirm" value="確認" id="btnConfirm" class="contactBtn center-block" />
 </form>
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

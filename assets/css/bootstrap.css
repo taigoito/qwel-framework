@@ -1133,6 +1133,7 @@ figure {
 img {
   vertical-align: middle;
 }
+img,
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -6529,6 +6530,7 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
+img,
 .center-block {
   display: block;
   margin-right: auto;

@@ -22,6 +22,7 @@
 
   &__1 {
     @include col("md", 5);
+    max-width: 22.5rem !important;
   }
 
   &__2 {

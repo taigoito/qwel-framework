@@ -51,8 +51,21 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    display: none;
     min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+    }
+
+    &.--mb {
+      display: block;
+      
+      @media (min-width: breakpoint("md")) {
+        display: none;
+      }
+    }
   }
 }

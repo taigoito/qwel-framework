@@ -68,10 +68,10 @@
                 <p>さまざまな業種の製造現場に、弊社社員（無期雇用）を派遣いたします。弊社社員として責任を持って派遣し、企業様の社員同様、真摯に業務に向き合います。派遣契約から製造請負への体制変更も可能です。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample00.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img01.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample01.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img00.jpg'; ?>">
               </figure>
             </section>
             <section id="tech" class="pageSection__sub">
@@ -84,10 +84,10 @@
                 <p>弊社工場ではさまざまな工作機械を備え、企業様のアウトソーシングに対応しています。生産商材は、金属研磨や樹脂研磨、眼鏡検査・組立、水栓品組立・検査など。製造請負商材は、眼鏡部品、シリコーン樹脂成形、自動車部品選別・検査などです。どのような商材でも対応可能です。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample02.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img02.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample03.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img03.jpg'; ?>">
               </figure>
             </section>
             <section id="logistics" class="pageSection__sub">
@@ -100,10 +100,10 @@
                 <p>弊社工場内で、製品保管～入荷～出荷まで対応可能です。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample04.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img04.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample05.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img05.jpg'; ?>">
               </figure>
             </section>
             <section>
@@ -115,13 +115,14 @@
                   <span class="pageSection__titleSpan1">[A社の場合]</span>
                   <span class="pageSection__titleSpan2"><span class="--dispatch">ヒト</span>×<span class="--tech">技術</span></span>
                 </h3>
-                <p>実現して❺ただきた?その結果?部性能が◎なくても○社の製品◎けでシス○ムを統合◎るか製品○導入する◎ともに交○で連携を◎り実現し○いただき◎いその結○一部性能◎良なくて○一社の製◎だけでシ○テムを統●実現して○ただきた◎その結果</p>
+                <p>Ａ社に弊社社員を派遣。この時点で、弊社社員はＡ社の専門知識や技術は持ち合わせておりません。
+                  <br>しかし、業務に対して真摯に向き合うこと約3年。弊社社員は専門知識や技術を身に付け、その部門にとって不可欠な存在となりました。もちろん、Ａ社社員との交流も深めて人間関係も良好です。今なお、Ａ社業務を支えるプロダクト･マイスターとして勤務を続けています。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample00.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img06.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample01.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img07.jpg'; ?>">
               </figure>
             </section>
             <section class="pageSection__sub">
@@ -130,13 +131,14 @@
                   <span class="pageSection__titleSpan1">[B社の場合]</span>
                   <span class="pageSection__titleSpan2"><span class="--tech">技術</span>×<span class="--logistics">場所</span></span>
                 </h3>
-                <p>実現して❺ただきた?その結果?部性能が◎なくても○社の製品◎けでシス○ムを統合◎るか製品○導入する◎ともに交○で連携を◎り実現し○いただき◎いその結○一部性能◎良なくて○一社の製◎だけでシ○テムを統●実現して○ただきた◎その結果</p>
+                <p>Ｂ社に数年間勤務していた弊社社員。その数年間でＢ社の技術や工程などを習得し、Ｂ社の社員をサポートできる役割も担うようになりました。
+                  <br>そんな時、Ｂ社より「社内が手狭になってきたので、弊社で工程ごと引き受けることは可能か？」との打診があり、快諾。Ｂ社でプロダクト･マイスターとなった弊社社員のもと、弊社の広い工場で様々な業務をまとめてお任せいただいています。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample02.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img08.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample03.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img09.jpg'; ?>">
               </figure>
             </section>
             <section class="pageSection__sub">
@@ -145,13 +147,14 @@
                   <span class="pageSection__titleSpan1">[C社の場合]</span>
                   <span class="pageSection__titleSpan2"><span class="--dispatch">ヒト</span>×<span class="--tech">技術</span>×<span class="--logistics">場所</span></span>
                 </h3>
-                <p>実現して❺ただきた?その結果?部性能が◎なくても○社の製品◎けでシス○ムを統合◎るか製品○導入する◎ともに交○で連携を◎り実現し○いただき◎いその結○一部性能◎良なくて○一社の製◎だけでシ○テムを統●実現して○ただきた◎その結果</p>
+                <p>Ｃ社に弊社社員を派遣。プロダクト･マイスターとして商品管理や入出荷システムなども習得しました。
+                  <br>ある時、Ｃ社とのお付き合いの中で輸送費の相談を受けました。日本の真ん中に位置する福井県からの発送であれば、輸送費の大幅ダウンが実現できることを提案しました。早速、入出荷システムごと弊社工場に移動したところ、輸送期間までも大幅に短縮でき、問題が一気に解決しました。</p>
               </div>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample04.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img10.jpg'; ?>">
               </figure>
               <figure class="pageSection__figure --grid_4">
-                <img src="<?php echo QWEL_THEME_URI . '/assets/sample05.jpg'; ?>">
+                <img src="<?php echo QWEL_THEME_URI . '/assets/img11.jpg'; ?>">
               </figure>
             </section>
             <p class="pageSection__lead --passion">

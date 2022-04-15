@@ -16,14 +16,17 @@ export default class Opening {
     const main = document.getElementById('main');
     const drawer = document.getElementById('drawer');
     const video = document.getElementById('coverVideo');
+    const videoMb = document.getElementById('coverVideoMb');
     
     header.classList.add('--hide');
     main.classList.add('--hide');
     drawer.classList.add('--hide');
     video.classList.add('--hide');
+    videoMb.classList.add('--hide');
 
     video.loop = true;
     video.play();
+    videoMb.play();
 
     window.setTimeout(() => {
       this._transitionEnd(firstTitle, () => {
@@ -36,6 +39,7 @@ export default class Opening {
         main.classList.remove('--hide');
         drawer.classList.remove('--hide');
         video.classList.remove('--hide');
+        videoMb.classList.remove('--hide');
       });
     }, 0);
   }

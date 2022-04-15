@@ -63,7 +63,15 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="container">
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
-<div class="top">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
+<!--<div class="top">
 <h3 class="entryTtl">電子部品検査作業</h3>
 <img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img13.jpg'; ?>" class="img-responsive center-block">
 <p>電子部品の完成品検査業務をお任せします。検査業務とは、完成品又は中間品の外観部分に発生する傷、異物、破損等を目視や顕微鏡を使用して検査する業務となります。初心者の方での丁寧、親切に業務内容指導いたします。</p>
@@ -237,7 +245,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <input type="submit" name="ACMS_POST_Form_Confirm" value="確認" id="btnConfirm" class="contactBtn center-block" />
 </form>
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

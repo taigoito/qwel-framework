@@ -63,7 +63,15 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="container">
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
-<div class="top">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
+<!--<div class="top">
 <h3 class="entryTtl">水栓品研磨</h3>
 <img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img17.jpg'; ?>" class="img-responsive center-block">
 <p>金属部品の研磨業務をお任せします。研磨とは、表面の凹凸を削り滑らかにする作業です。手作業の簡単な研磨から職人技の研磨まで、最新技術の高度な研磨と同じ研磨とは思えないほど、異なるものになる奥深くて面白い分野です。製造業の中で、モノづくりには欠かせない技術です。何度も繰り返し研磨をする細かい作業であり、製品のツヤを生む大切な作業です。製品の見た目に関わる仕事だからこそやりがいがあると言えるでしょう。細かい作業が得意な方、手に職を付けたい方、モノづくりに興味がある方に向いているお仕事です。未経験者でもお仕事内容をひとつひとつ丁寧に何度でも分かりやすく説明いたします。まずはお気軽にお問合せください。</p>
@@ -253,7 +261,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <input type="submit" name="ACMS_POST_Form_Confirm" value="確認" id="btnConfirm" class="contactBtn center-block" />
 </form>
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

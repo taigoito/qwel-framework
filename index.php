@@ -57,7 +57,7 @@
           <div class="liveSection__wrapper">
             <div class="liveSection__container"> 
               <div class="liveSection__videoFrame">
-                <iframe class="liveSection__liveVideo" width="560" height="315" src="https://www.youtube.com/embed/5TEpC4WZgVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="liveSection__liveVideo" src="https://www.youtube.com/embed/Tf619-YxahM?autoplay=1&mute=1&playsinline=1&loop=1&playlist=Tf619-YxahM&controls=0&disablekb=1" frameborder="0"></iframe>
               </div>
             </div>
           </div>

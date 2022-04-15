@@ -63,9 +63,17 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="container">
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
-<div class="top">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
+<!--<div class="top">
 <h3 class="entryTtl">眼鏡部品製造作業</h3>
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img00.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img00.png'; ?>" class="img-responsive center-block">
 <p>新しいオシャレやファッションアイテムの一つとして、幅広い世代から注目されているめがね。世界最高の技術力と品質を誇る鯖江のめがねがどのように作られているのか。とても身近なめがねですが、一つが完成するまでには200以上の工程が必要です。その工程のひとつであるプレス工程に従事して頂きます。あなたが手掛けためがねが国内外へ羽ばたきます。</p>
 </div>
 <div class="info">
@@ -124,12 +132,12 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <h4 class="subTtl">職場環境</h4>
 <div class="row">
 <div class="col-md-4 col-sm-6">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img01.jpg'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img01.jpg'; ?>" class="img-responsive center-block">
 <h5>製品チェック</h5>
 <p>製品にキズや変形がないかルーペ（拡大鏡）を使用し確認します。</p>
 </div>
 <div class="col-md-4 col-sm-6">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img02.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img02.png'; ?>" class="img-responsive center-block">
 <h5>職場の男女比率</h5>
 <p>当事業所は２０代～４０代までの女性が約半数と女性が活躍しております。女性も安心して働けるよう努めております。</p>
 </div>
@@ -138,7 +146,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="staff">
 <h4 class="subTtl">先輩の声</h4>
 <div class="row">
-<div class="col-md-3 col-sm-4"><img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img03.jpg'; ?>" class="img-responsive center-block"></div>
+<div class="col-md-3 col-sm-4"><img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img03.jpg'; ?>" class="img-responsive center-block"></div>
 <div class="col-md-9 col-sm-8">
 <h5>鯖江ブランドを製造していることに誇りを持っています！</h5>
 <p class="bbTxt">請負第一事業所　グループリーダー<br />
@@ -153,7 +161,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="inner">
 <div class="row">
 <div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img04.jpg'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img04.jpg'; ?>" class="img-responsive center-block">
 </div>
 <div class="col-md-9 col-md-pull-3 col-sm-8 col-sm-pull-4">
 <h5>協力会社として心強い味方です。</h5>
@@ -265,7 +273,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <input type="submit" name="ACMS_POST_Form_Confirm" value="確認" id="btnConfirm" class="contactBtn center-block" />
 </form>
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

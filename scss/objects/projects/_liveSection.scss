@@ -35,9 +35,9 @@
   &__liveVideo {
     display: block;
     width: 21.25rem;
-    height: 14.0625rem;
+    height: 13.5rem;
     margin: 0;
-    padding: 1.875rem 0.625rem 1.875rem 1.875rem;
+    padding: 1.875rem 0.625rem 1.5625rem 1.875rem;
   }
 
   @media (min-width: breakpoint("sm")) {
@@ -52,9 +52,9 @@
     }
 
     &__liveVideo {
-      width: 31.875rem;
-      height: 21.09375rem;
-      padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+      width: 510px;
+      height: 340px;
+      padding: 54px 21px 54px 54px;
     }
   }
 
@@ -69,10 +69,10 @@
       }
     }
 
-    &__liveVideo {
-      width: 51rem;
-      height: 33.75rem;
-      padding: 4.5rem 1.5rem 4.5rem 4.5rem;
+    &__liveVideo { // 75%
+      width: 810px;
+      height: 518px;
+      padding: 72px 24px 60px 81px;
     }
   }
 
@@ -88,9 +88,9 @@
     }
 
     &__liveVideo {
-      width: 68rem;
-      height: 45rem;
-      padding: 6rem 2rem 6rem 6rem;
+      width: 1080px;
+      height: 690px;
+      padding: 96px 32px 80px 108px;
     }
   }
 }

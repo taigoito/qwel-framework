@@ -45,6 +45,9 @@ trait Supports {
     // 固定ページの抜粋
     add_post_type_support('page', 'excerpt');
 
+    // 抜粋文字数指定
+    add_filter('excerpt_length', [$this, 'register_excerpt_length'], 999);
+
     //カテゴリー説明でHTMLタグを使う
     remove_filter('pre_term_description', 'wp_filter_kses');
 
@@ -148,5 +151,14 @@ trait Supports {
     // エディタースタイルの適用
     add_theme_support('editor-styles');
     add_editor_style('editor.css');
+    //add_editor_style('assets/css/base.css');
+    add_editor_style('assets/css/bootstrap.css');
+    add_editor_style('assets/css/info.css');
+    add_editor_style('assets/css/jobs.css');
+    add_editor_style('assets/css/top.css');
+  }
+  
+  public function register_excerpt_length() {
+    return 96;
   }
 }

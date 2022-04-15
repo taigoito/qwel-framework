@@ -62,9 +62,17 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <div class="container">
 <div class="row">
 <div class="col-md-10 col-md-offset-1">
-<div class="top">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
+<!--<div class="top">
 <h3 class="entryTtl">社員募集</h3>
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/jobs/img.png'; ?>" class="img-responsive center-block">
+<img src="<?php //echo QWEL_THEME_URI . '/assets/img/jobs/img.png'; ?>" class="img-responsive center-block">
 <p>　弊社は製造アウトソーシング企業として、本社製造、請負事業所、派遣事業所にて社員が業務に励んでおります。石川県での派遣事業も展開し、北陸のモノづくりに新たな力で尽力している所存です。モノづくりのプロ集団それがプロダクト・マイスターです。</p>
 </div>
 <div class="info">
@@ -280,7 +288,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <input type="submit" name="ACMS_POST_Form_Confirm" value="確認" id="btnConfirm" class="contactBtn center-block" />
 </form>
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

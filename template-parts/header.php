@@ -15,8 +15,8 @@
          */
         get_template_part('template-parts/gNav');
         ?><!-- #gNav -->
-        <a class="header__btn --telTo" href="#"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_tel.svg'; ?>"></a>
-        <a class="header__btn --mailTo" href="#"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_mail.svg'; ?>"></a>
+        <a class="header__btn --telTo" href="tel:0778-53-1231"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_tel.svg'; ?>"></a>
+        <a class="header__btn --mailTo" href="mailTo:minami@p-meister.co.jp"><img src="<?php echo QWEL_THEME_URI . '/assets/btn_mail.svg'; ?>"></a>
       </div>
     </div>
     <?php if (!is_front_page()) { ?>

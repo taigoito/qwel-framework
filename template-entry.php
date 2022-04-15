@@ -1,3 +1,10 @@
+<?php
+/*
+ * Template Name: リクルートテンプレート
+ * Template Post Type: page
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,31 +21,19 @@
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/base.css'; ?>">
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.p-meister.co.jp/rss2.xml" />
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/jobs.css'; ?>">
-<script>
-		ACMS.Ready(function(){
-			ACMS.Config.autoHeightRArray = [{
-				mark: '.ah-mark',
-				config: {
-					style: 'height',
-					element: '',
-					offset: 0,
-					parent: '.ah-container',
-					list: '.ah-list'
-				}
-			}];
-		});
-	</script>
+<script src="<?php echo QWEL_THEME_URI . '/assets/js/jquery.matchHeight-min.js'; ?>"></script>
+<script>$(function() {$('.envir .col-md-4').matchHeight();});</script>
 <meta name="generator" content="a-blog cms " />
 </head>
 <body>
 <header id="header">
-<h1><a href="../" title="top"><img src="<?php echo QWEL_THEME_URI . '/assets/img/common/head_logo.png" alt="株式会社 プロダクトマイスター RECRUIT" class="img-responsive center-block'; ?>"></a></h1>
+<h1><a href="../../" title="top"><img src="<?php echo QWEL_THEME_URI . '/assets/img/common/head_logo.png'; ?>" alt="株式会社 プロダクトマイスター RECRUIT" class="img-responsive center-block"></a></h1>
 <p class="tel"><span class="tel-link"><img src="<?php echo QWEL_THEME_URI . '/assets/img/common/tel.png'; ?>" alt="0778-53-1231"></span></p>
 <nav id="navMenu">
 <ul>
-<li><a href="../#message" title="ご挨拶">ご挨拶</a></li>
-<li><a href="../information/" title="仕事内容">仕事内容</a></li>
-<li><a href="../jobs/" title="募集職種">募集職種</a></li>
+<li><a href="../../#message" title="ご挨拶">ご挨拶</a></li>
+<li><a href="../../information/" title="仕事内容">仕事内容</a></li>
+<li><a href="../../jobs/" title="募集職種">募集職種</a></li>
 <li class="spTel visible-xs visible-sm">
 お電話でのお問い合わせはこちら <span class="tel-link">0778-53-1231</span></li>
 </ul>
@@ -50,7 +45,7 @@
 <span></span>
 </div>
 </div>
-<a href="../jobs/" title="entry" class="entryBtn"><span>entry</span></a>
+<a href="../../jobs/" title="entry" class="entryBtn"><span>entry</span></a>
 </header>
 <div id="mainv">
 <div class="inner">
@@ -68,49 +63,20 @@ background: #DDD;
 box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 </style>
-<main id="main" class="text-center">
-<section id="jobs">
-<div class="container">
-<div class="row ah-container">
 
-	<?php 
-  $parent_id = 106;
-	$args = [
-		'post_parent' => $parent_id,
-		'posts_per_page' => -1,
-		'post_type' => 'page',
-		'orderby' => 'menu_order',
-		'order' => 'ASC'
-	];
-	
-	$common_pages = new WP_Query($args);
-	if($common_pages->have_posts()) {
-		while($common_pages->have_posts()){
-			$common_pages->the_post();
-	?>
-
-		<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-		<a href="<?php the_permalink(); ?>">
-		<figure class="ah-mark">
-		<?php the_post_thumbnail(); ?>
-		<figcaption><p><?php the_title(); ?></p></figcaption>
-		</figure>
-		</a>
-		</div>
-
-	<?php
-  	}
-		wp_reset_postdata();
-	}
-  ?>
-
-</div>
-</section>
-
+<main id="main">
 <section id="jobsEntry">
 <div class="container">
 <div class="row">
-<div class="col-md-10 col-md-offset-1 text-left">
+<div class="col-md-10 col-md-offset-1">
+  <?php 
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      the_content();
+    }
+  }
+  ?>
 <div id="entryForm">
 <h4 class="subTtl">エントリーフォーム</h4>
 <p class="contactRead">下記の項目を入力し、「<a href="<?php echo home_url('privacy-policy'); ?>" target="_blank">プライバシーポリシー</a>」に示す内容をご理解いただき、同意の上で送信してください。<br />後日、弊社採用担当からご連絡差し上げます。</p>
@@ -126,10 +92,10 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <footer id="footer" class="text-center">
 <div id="pageTop"><a href="#"></a></div>
 <div class="inner">
-<div class="container"><a href="../" class="linkBtn">リクルートサイトトップ</a></div>
+<div class="container"><a href="../../" class="linkBtn">リクルートサイトトップ</a></div>
 </div>
 <div class="copy">
-<div class="container"><img src="<?php echo QWEL_THEME_URI . '/assets/img/common/txt_copy.png" alt="Product Meister Co. Ltd. All rights reserved." class="img-responsive center-block'; ?>"></div>
+<div class="container"><img src="<?php echo QWEL_THEME_URI . '/assets/img/common/txt_copy.png'; ?>" alt="Product Meister Co. Ltd. All rights reserved." class="img-responsive center-block"></div>
 </div>
 </footer>
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/common.js'; ?>"></script>

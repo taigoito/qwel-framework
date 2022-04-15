@@ -55,7 +55,7 @@
 <span></span>
 </div>
 </div>
-<a href="./entry/" title="entry" class="entryBtn"><span>entry</span></a>
+<a href="./jobs/" title="entry" class="entryBtn"><span>entry</span></a>
 </div>
 <div id="topMainv"><div class="mainTxt"></div></div>
 <style>
@@ -113,62 +113,38 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 <h2 class="topTtl"><span><img src="<?php echo QWEL_THEME_URI . '/assets/img/index/ttl_jobs.png'; ?>" alt="Jobs" class="img-responsive center-block"></span>募集職種</h2>
 <p class="jobTxt">経験、資格不要　未経験者歓迎！</p>
 <div class="row ah-container">
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry00/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img00.jpg'; ?>" alt="">
-<figcaption><p>社員募集</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry01/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img01.jpg'; ?>" alt="">
-<figcaption><p>眼鏡部品製造作業</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry02/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img02.jpg'; ?>" alt="">
-<figcaption><p>検査・選別作業</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry03/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img03.jpg'; ?>" alt="">
-<figcaption><p>ろ過成形作業</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry04/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img04.jpg'; ?>" alt="">
-<figcaption><p>レアアース製造作業</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry05/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img05.jpg'; ?>" alt="">
-<figcaption><p>電子部品検査作業</p></figcaption>
-</figure>
-</a>
-</div>
-<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
-<a href="./jobs/entry06/">
-<figure class="ah-mark">
-<img src="<?php echo QWEL_THEME_URI . '/assets/img/recruit/img06.jpg'; ?>" alt="">
-<figcaption><p>水栓品研磨</p></figcaption>
-</figure>
-</a>
-</div>
+	
+	<?php 
+  $parent_id = 106;
+	$args = [
+		'post_parent' => $parent_id,
+		'posts_per_page' => -1,
+		'post_type' => 'page',
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
+	];
+	
+	$common_pages = new WP_Query($args);
+	if($common_pages->have_posts()) {
+		while($common_pages->have_posts()){
+			$common_pages->the_post();
+	?>
+
+		<div class="col-md-3 col-sm-3 col-xs-6 ah-list">
+		<a href="<?php the_permalink(); ?>">
+		<figure class="ah-mark">
+		<?php the_post_thumbnail(); ?>
+		<figcaption><p><?php the_title(); ?></p></figcaption>
+		</figure>
+		</a>
+		</div>
+
+	<?php
+  	}
+		wp_reset_postdata();
+	}
+  ?>
+
 </div>
 <a href="./jobs/" class="linkBtn">募集職種一覧へ</a>
 </div>
