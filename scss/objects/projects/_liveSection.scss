@@ -9,88 +9,38 @@
 
   &__container {
     @include container();
-  }
-  
-  &__videoFrame {
-    position: relative;
-    width: 22.5rem;
-    height: 15rem;
-    margin: 0 auto;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 10;
-      width: 21.25rem;
-      height: 15rem;
-      margin: auto;
-      background: url("./assets/videoframe.png") no-repeat 0 0 / contain scroll;
-    }
+    padding: 4.5rem 0;
   }
 
-  &__liveVideo {
+  &__liveVideo { // *1.35
     display: block;
-    width: 21.25rem;
-    height: 13.5rem;
-    margin: 0;
-    padding: 1.875rem 0.625rem 1.5625rem 1.875rem;
+    width: 21.6rem;
+    height: 12.15rem;
+    margin: 0 1.2rem;
+    box-shadow: 0 0 1rem 1rem rgba(255, 255,255, 0.7);
   }
 
   @media (min-width: breakpoint("sm")) {
-    &__videoFrame {
-      width: 33.75rem;
-      height: 22.5rem;
-
-      &::before {
-        width: 31.875rem;
-        height: 22.5rem;
-      }
-    }
-
-    &__liveVideo {
-      width: 510px;
-      height: 340px;
-      padding: 54px 21px 54px 54px;
+    &__liveVideo { // *2
+      width: 32rem;
+      height: 18rem;
+      margin: 0 2rem;
     }
   }
 
   @media (min-width: breakpoint("md")) {
-    &__videoFrame {
-      width: 54rem;
-      height: 36rem;
-
-      &::before {
-        width: 51rem;
-        height: 36rem;
-      }
-    }
-
-    &__liveVideo { // 75%
-      width: 810px;
-      height: 518px;
-      padding: 72px 24px 60px 81px;
+    &__liveVideo { // *3
+      width: 48rem;
+      height: 27rem;
+      margin: 0 3rem;
     }
   }
 
   @media (min-width: breakpoint("lg")) {
-    &__videoFrame {
-      width: 72rem;
-      height: 48rem;
-
-      &::before {
-        width: 68rem;
-        height: 48rem;
-      }
-    }
-
-    &__liveVideo {
-      width: 1080px;
-      height: 690px;
-      padding: 96px 32px 80px 108px;
+    &__liveVideo { // *4
+      width: 64rem;
+      height: 36rem;
+      margin: 0 4rem;
     }
   }
 }
