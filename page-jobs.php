@@ -12,7 +12,7 @@
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/bootstrap.min.js'; ?>"></script>
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/bootstrap.css'; ?>">
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/base.css'; ?>">
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.p-meister.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.p-meister.co.jp/rss2.xml" />
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/jobs.css'; ?>">
 <script>
 		ACMS.Ready(function(){

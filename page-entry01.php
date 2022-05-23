@@ -13,7 +13,7 @@
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/bootstrap.min.js'; ?>"></script>
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/bootstrap.css'; ?>">
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/base.css'; ?>">
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.p-meister.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.p-meister.co.jp/rss2.xml" />
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/jobs.css'; ?>">
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/jquery.matchHeight-min.js'; ?>"></script>
 <script>$(function() {$('.envir .col-md-4').matchHeight();});</script>
@@ -173,7 +173,7 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 </div>
 <div id="entryForm">
 <h4 class="subTtl">エントリーフォーム</h4>
-<p class="contactRead">下記の項目を入力し、「<a href="http://www.p-meister.co.jp/privacy/" target="_blank">プライバシーポリシー</a>」に示す内容をご理解いただき、同意の上で送信してください。<br />後日、弊社採用担当からご連絡差し上げます。</p>
+<p class="contactRead">下記の項目を入力し、「<a href="https://www.p-meister.co.jp/privacy/" target="_blank">プライバシーポリシー</a>」に示す内容をご理解いただき、同意の上で送信してください。<br />後日、弊社採用担当からご連絡差し上げます。</p>
 <div class="contactIn">
 <form action="#entryForm" method="post" class="acms-form" enctype="multipart/form-data" name="Form1">
 <table class="mainTbl">

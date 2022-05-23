@@ -12,7 +12,7 @@
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/bootstrap.min.js'; ?>"></script>
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/bootstrap.css'; ?>">
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/base.css'; ?>">
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.p-meister.co.jp/rss2.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.p-meister.co.jp/rss2.xml" />
 <script src="<?php echo QWEL_THEME_URI . '/assets/js/top.js'; ?>"></script>
 <link rel="stylesheet" href="<?php echo QWEL_THEME_URI . '/assets/css/top.css'; ?>">
 <script>
