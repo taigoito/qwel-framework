@@ -41,8 +41,8 @@ trait Base_Settings {
 			'card_aspect_ratio'    => 0.75
 		],
 
-		'footer' => [
-			'copyright'            => '2021 Qwel'
+		'youtube'  => [
+			'key'  => ''
 		]
 	];
 }

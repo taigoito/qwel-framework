@@ -14,6 +14,10 @@ trait Customizer_Settings {
 				'primary_color'        => ['type'  => 'color'],
 				'primary_dark_color'   => ['type'  => 'color'],
 				'secondary_color'      => ['type'  => 'color'],
+			],
+
+			'youtube' => [
+				'key'  => ['type' => 'text']
 			]
 		];
     
@@ -21,7 +25,8 @@ trait Customizer_Settings {
 		$customizer_settings = apply_filters('qwel_theme_customizer_settings', $customizer_settings);
 
 		$settings_array = [
-			'style'  => $customizer_settings['style']
+			'style'    => $customizer_settings['style'],
+			'youtube'  => $customizer_settings['youtube']
 		];
 
 		return $settings_array;

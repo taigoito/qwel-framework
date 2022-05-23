@@ -56,7 +56,7 @@
           </h1>
           <div class="liveSection__wrapper">
             <div class="liveSection__container"> 
-              <iframe class="liveSection__liveVideo" src="https://www.youtube.com/embed/Tf619-YxahM?autoplay=1&mute=1&playsinline=1&loop=1&playlist=Tf619-YxahM&controls=0&disablekb=1" frameborder="0"></iframe>
+              <iframe class="liveSection__liveVideo" src="<?php echo 'https://www.youtube.com/embed/' . \Qwel::get_data('youtube', 'key') . '?autoplay=1&mute=1' ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </article>
