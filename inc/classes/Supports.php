@@ -156,9 +156,20 @@ trait Supports {
     add_editor_style('assets/css/info.css');
     add_editor_style('assets/css/jobs.css');
     add_editor_style('assets/css/top.css');
+
+    // user
+    add_filter('user_contactmethods', [$this, 'my_user_meta'], 10, 1);
+
+  }
+
+  public function my_user_meta($profileuser) {
+    // user
+    $profileuser['livekey'] = 'Live Key';
+    return $profileuser;
   }
   
   public function register_excerpt_length() {
     return 96;
   }
+
 }
