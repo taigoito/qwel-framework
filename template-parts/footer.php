@@ -4,7 +4,7 @@
         <figure class="footer__brand">
           <img src="<?php echo QWEL_THEME_URI . '/assets/logo_footer.svg'; ?>">
         </figure>
-        <address class="footer__address">〒910-0004 福井県鯖江市糺町21番地1</address>
+        <address class="footer__address">〒916-0004 福井県鯖江市糺町21番地1</address>
         <a class="footer__map" href="https://goo.gl/maps/WEhEuk79QhMLpPTJ9">Google Map</a>
         <figure class="footer__tel">
           <img src="<?php echo QWEL_THEME_URI . '/assets/tel.svg'; ?>">
