@@ -1,12 +1,12 @@
 <?php
-namespace Qwel_Theme;
+namespace Takasuohana_Theme;
 
 /**
  * カスタマイザーの設定項目を登録
  */
 trait Customizer {
-  use \Qwel_Theme\Base,
-    \Qwel_Theme\Customizer_Settings;
+  use \Takasuohana_Theme\Base,
+    \Takasuohana_Theme\Customizer_Settings;
 
   protected static $customize  = '';
   protected static $priority   = 0;
@@ -15,8 +15,11 @@ trait Customizer {
     self::$customize = $wp_customize;
     self::add_panel(self::$db_name);
 
+    // セクションを取得
+    $sections = self::get_sections();
+
     // 設定項目の配列
-    $settings_array = self::make_settings_array();
+    $settings_array = self::make_settings_array($sections);
 
     // $settings_array を順次処理
     foreach ($settings_array as $section => $keys) {
@@ -123,14 +126,14 @@ trait Customizer {
 	protected static function get_sanitize_name($type = false) {
 		switch ($type) {
 			case 'checkbox':
-				return ['\Qwel', 'sanitize_checkbox'];
+				return ['\Takasuohana', 'sanitize_checkbox'];
       case 'number':
-				return ['\Qwel', 'sanitize_float'];
+				return ['\Takasuohana', 'sanitize_float'];
 			case 'radio':
 			case 'select':
-				return ['\Qwel', 'sanitize_select'];
+				return ['\Takasuohana', 'sanitize_select'];
 			case 'image':
-				return ['\Qwel', 'sanitize_image'];
+				return ['\Takasuohana', 'sanitize_image'];
 			case 'color':
 				return 'sanitize_hex_color';
 			default: // text | textarea

@@ -15,7 +15,7 @@
                         /**
                          * .post__date
                          */
-                        get_template_part('template-parts/post/date');
+                        if (!is_page()) get_template_part('template-parts/post/date');
 
                         /**
                          * .post__heading

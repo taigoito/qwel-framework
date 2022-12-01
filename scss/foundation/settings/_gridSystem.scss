@@ -5,35 +5,40 @@
 $rootFontSize:     16px;
 $rootFontSizeXs:   3.84vw; // 4vw以下推奨
 
-// 基準幅
-$base:             18rem;
-$breakpointBase:   300px;
+// 基準幅 (21remまたは22.5rem推奨)
+$base:             21rem;
+$breakpointBase:   384px;
 $containerBase:    var(--container-base, #{$base});
 
 // xs: 1カラム
 // 文字サイズを流動させ、レイアウトを固定
-$containerWidthXs: calc(#{$containerBase} * 4 / 3);
+$containerWidthXs: $containerBase;
 
 // sm: 1〜2カラム (下層ページで、メディアと文章の使用くらいに留める)
 // コンテナ幅を拡げ、文字サイズをpxに切り替え固定
 // WordPressのブロックエディタの都合上、BPを600px以内に設置するのが望ましい
-$breakpointSm:     $breakpointBase * 2;
-$containerWidthSm: calc(#{$containerBase} * 2);
+$breakpointSm:     600px;
+$containerWidthSm: calc(#{$containerBase} * 3 / 2);
 
 // 以下、任意に定義
 // md: 1〜2カラム (カードレイアウト可能)
-$breakpointMd:     $breakpointBase * 3;
-$containerWidthMd: calc(#{$containerBase} * 3);
+$breakpointMd:     $breakpointBase * 2;
+$containerWidthMd: calc(#{$containerBase} * 2);
 
 // lg: 1〜3カラム (サイドバー設置可能)
-$breakpointLg:     $breakpointBase * 4;
-$containerWidthLg: calc(#{$containerBase} * 4);
+$breakpointLg:     $breakpointBase * 3;
+$containerWidthLg: calc(#{$containerBase} * 3);
+
+// xl: 1〜4カラム (トップページ、ランディングページ等に限る)
+$breakpointXl:     $breakpointBase * 4;
+$containerWidthXl: calc(#{$containerBase} * 4);
 
 // ブレイクポイント (以下BP)
 $breakpoints:      (
   sm:                $breakpointSm,
   md:                $breakpointMd,
-  lg:                $breakpointLg
+  lg:                $breakpointLg,
+  xl:                $breakpointXl
 );
 
 // コンテナ幅
@@ -41,23 +46,8 @@ $containerWidths:  (
   xs:                $containerWidthXs,
   sm:                $containerWidthSm,
   md:                $containerWidthMd,
-  lg:                $containerWidthLg
-);
-
-// モーダルアスペクト比
-$modalRatio:       5 / 8;
-$modalAspectRatio: var(--modal-aspect-ratio, #{$modalRatio});
-
-// モーダル幅
-$modalWidths:      (
-  md:                calc(#{$containerBase} * 2),
-  lg:                calc(#{$containerBase} * 3)
-);
-
-// モーダル幅
-$modalHeights:      (
-  md:                calc(#{$containerBase} * #{$modalAspectRatio} * 2),
-  lg:                calc(#{$containerBase} * #{$modalAspectRatio} * 3)
+  lg:                $containerWidthLg,
+  xl:                $containerWidthXl
 );
 
 // リストアスペクト比
@@ -107,12 +97,14 @@ $sliderHeights:       (
 
 // BPの配列から、引数の接頭辞以降を取り除く関数
 @function popBreakpoints($infix: "lg") {
-  @if $infix == "lg" {
+  @if $infix == "xl" {
     @return $breakpoints;
+  } @else if $infix == "lg" {
+    @return map-remove($breakpoints, "xl");
   } @else if $infix == "md" {
-    @return map-remove($breakpoints, "lg");
+    @return map-remove($breakpoints, "xl", "lg");
   } @else if $infix == "sm" {
-    @return map-remove($breakpoints, "lg", "md");
+    @return map-remove($breakpoints, "xl", "lg", "md");
   }
 }
 

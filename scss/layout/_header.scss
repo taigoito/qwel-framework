@@ -8,12 +8,8 @@
   right: 0;
   left: 0;
   z-index: 1000; // 基準
-  background-color: rgba($bodyBg, .7);
+  background-color: $bodyBg;
   transition: .35s ease-in-out all;
-
-  &:hover {
-    background-color: rgba($bodyBg, 1);
-  }
 
   &__container {
     @include container();

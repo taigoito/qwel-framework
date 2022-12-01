@@ -20,6 +20,12 @@
         border-top: 1px solid themeColor("lighter");
       }
     }
+
+    @at-root .list.--xl .post:first-child {
+      @media (min-width: breakpoint("xl")) {
+        border-top: 1px solid themeColor("lighter");
+      }
+    }
   }
 
   .post__inner {
@@ -35,6 +41,10 @@
 
     @at-root .list.--lg .post__image {
       @include col("lg", auto);
+    }
+
+    @at-root .list.--xl .post__image {
+      @include col("xl", auto);
     }
 
     a {
@@ -63,6 +73,14 @@
       @include col("lg", 8);
 
       @media (min-width: breakpoint("lg")) {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @at-root .list.--xl .post__textContent {
+      @include col("xl", 8);
+
+      @media (min-width: breakpoint("xl")) {
         padding: 0 1.5rem;
       }
     }
@@ -106,6 +124,12 @@
 
     @at-root .list.--lg .post__excerpt {
       @media (min-width: breakpoint("lg")) {
+        height: 3.6rem; // 2行
+      }
+    }
+
+    @at-root .list.--xl .post__excerpt {
+      @media (min-width: breakpoint("xl")) {
         height: 3.6rem; // 2行
       }
     }

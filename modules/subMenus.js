@@ -2,7 +2,7 @@
  * Sub Menus
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Qwel
+ * @package Takasuohana
  */
 
 export default class SubMenus {

@@ -1,20 +1,27 @@
 <?php get_header();
   /**
    * Main
-   * 
+   * アーカイブページでは、main__container に .--xl を付与
    */
   ?>
   <main id="main" class="main">
+    <?php
+    /**
+     * Title Area
+     * H1タグで、クエリに応じたタイトルを表示
+     */
+    get_template_part('template-parts/titleArea');
+    ?><!-- #titleArea -->
     <div class="main__wrapper">
-      <div class="main__container">
+      <div class="main__container --xl">
         <?php
         /**
          * パンくずリスト
          */
         get_template_part('template-parts/breadcrumb');
         ?><!-- #breadcrumb-->
-        <div class="archive">
-          <div class="list --lg">
+        <div class="archive --xl">
+          <div class="list --xl">
             <ul class="list__inner">
               <?php
               /**

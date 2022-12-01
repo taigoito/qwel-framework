@@ -2,7 +2,7 @@
  * Scrolling
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Qwel
+ * @package Takasuohana
  */
 
 export default class Scrolling {
@@ -24,19 +24,16 @@ export default class Scrolling {
   }
 
   _handleEvents() {
-    const links = document.querySelectorAll('a[href]');
-    links.forEach((link) => { 
-      link.addEventListener('click', (event) => {
-        const href = event.currentTarget.getAttribute('href');
-        const regexp = /#[\w\%-]+/gi;
-        if (href && regexp.test(href)) {
-          const hash = href.split('#').pop();
-          if (document.getElementById(hash) != null) {
-            event.preventDefault();
-            this.scroll(hash);
-          }
+    document.addEventListener('click', (event) => {
+      const href = event.target.getAttribute('href');
+      const regexp = /#[\w\%-]+/gi;
+      if (href && regexp.test(href)) {
+        const hash = href.split('#').pop();
+        if (document.getElementById(hash) != null) {
+          event.preventDefault();
+          this.scroll(hash);
         }
-      });
+      }
     });
   }
 

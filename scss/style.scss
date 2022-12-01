@@ -1,7 +1,7 @@
 /*
-Theme Name: Qwel
-Description: This is a theme for someone's portfolio or blog. You can customize and use.
-Version: 2.0
+Theme Name: Takasuohana
+Description: This is a theme for Takasu Ohana farm.
+Version: 1.0
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -28,10 +28,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "layout/siteBrand";
 @import "layout/gNav";
 @import "layout/main";
+@import "layout/titleArea";;
 @import "layout/sidebar";
 @import "layout/footer";
 
 // Objects
+@import "objects/projects/sections";
 @import "objects/projects/pages";
 @import "objects/projects/posts";
 @import "objects/projects/archive";
@@ -46,7 +48,6 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/components/list";
 @import "objects/components/icon";
 @import "objects/components/mediaText";
-@import "objects/components/modal";
 @import "objects/components/pagination";
 @import "objects/components/preloader";
 @import "objects/components/slider";
@@ -54,9 +55,6 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/utilities/form";
 @import "objects/utilities/grid";
 @import "objects/utilities/table";
-@import "objects/utilities/spacing";
-@import "objects/utilities/type";
-@import "objects/utilities/visibility";
 @import "objects/utilities/moreText";
 @import "objects/utilities/responsiveColor";
 @import "objects/utilities/accessibilities";

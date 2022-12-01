@@ -4,7 +4,9 @@
 
 .post.--page {
   position: relative;
-  width: 100%;
+  width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
@@ -13,4 +15,43 @@
       text-align: justify;
     }
   }
+
+  .post__section {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  h5 {
+    color: #b98f6d;
+  }
+}
+
+@for $i from 1 through 6 {
+  .page-feature0#{$i} .titleArea__cover {
+    background-image: url("./assets/feature_0#{$i - 1}_bg.jpg");
+  }
+}
+
+.page-feature01 .titleArea__cover {
+  background-position-y: 33%;
+}
+
+.page-feature02 .titleArea__cover {
+  background-position-y: 85%;
+}
+
+.page-feature03 .titleArea__cover {
+  background-position-y: 100%;
+}
+
+.page-feature04 .titleArea__cover {
+  background-position-y: 60%;
+}
+
+.page-feature05 .titleArea__cover {
+  background-position-y: 40%;
+}
+
+.page-feature06 .titleArea__cover {
+  background-position-y: 50%;
 }

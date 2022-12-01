@@ -2,7 +2,7 @@
  * Init
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Qwel
+ * @package Takasuohana
  */
 
 import Preloader from './preloader.js';
@@ -23,10 +23,6 @@ new ResponsiveColor();
 // Scrolling
 import Scrolling from './scrolling.js';
 new Scrolling();
-
-// Modal
-import Modal from './modal.js';
-new Modal();
 
 // Fader
 import Fader from './fader.js';

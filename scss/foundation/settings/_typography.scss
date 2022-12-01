@@ -33,7 +33,7 @@ $sectionMarginBottom:  1.5rem;
 
 // 見出し
 $headingMarginTop:     1.5rem;
-$headingMarginBottom:  .75rem;
+$headingMarginBottom:  1.5rem;
 $headingFontFamily:    $fontFamilySansSerif;
 $headingFontWeight:    $fontWeightSansSerif;
 $h1FontSize:           var(--xxl-font-size, map-get($fontSizes, "xxl"));
@@ -45,7 +45,7 @@ $h6FontSize:           var(--sm-font-size, map-get($fontSizes, "sm")); // bold
 
 // 本文
 $textMarginTop:        0;
-$textMarginBottom:     .75rem;
+$textMarginBottom:     1.5rem;
 
 // small (行間、字間を拡げる)
 $smallFontSize:        percentage(7 / 8);

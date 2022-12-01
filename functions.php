@@ -1,39 +1,40 @@
 <?php
 /**
- * Qwel functions
+ * Takasuohana functions
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Qwel
+ * @package Takasuohana
  */
 
 // テーマのパス, URI
-define('QWEL_THEME_DIR', get_template_directory());
-define('QWEL_THEME_URI', get_template_directory_uri());
+define('TAKASUOHANA_THEME_DIR', get_template_directory());
+define('TAKASUOHANA_THEME_URI', get_template_directory_uri());
+define('TAKASUOHANA_THEME_ASSETS', get_stylesheet_directory_uri() . '/assets/');
 
 /**
  * 定数定義
  */
-require_once QWEL_THEME_DIR . '/inc/consts.php';
+require_once TAKASUOHANA_THEME_DIR . '/inc/consts.php';
 
 /**
  * ヘルパー関数群
  */
-require_once QWEL_THEME_DIR . '/inc/helpers.php';
+require_once TAKASUOHANA_THEME_DIR . '/inc/helpers.php';
 
 /**
  * パーツ生成関数群
  */
-require_once QWEL_THEME_DIR . '/inc/parts.php';
+require_once TAKASUOHANA_THEME_DIR . '/inc/parts.php';
 
 /**
  * classのオートロード
  */
 spl_autoload_register(
 	function($classname) {
-		if (strpos($classname, 'Qwel_Theme') === false) return;
+		if (strpos($classname, 'Takasuohana_Theme') === false) return;
 		$classname = str_replace('\\', '/', $classname);
-		$classname = str_replace('Qwel_Theme/', '', $classname);
-		$file      = QWEL_THEME_DIR . '/inc/classes/' . $classname . '.php';
+		$classname = str_replace('Takasuohana_Theme/', '', $classname);
+		$file      = TAKASUOHANA_THEME_DIR . '/inc/classes/' . $classname . '.php';
 		if (file_exists($file)) {
 			require $file;
 		}
@@ -43,12 +44,12 @@ spl_autoload_register(
 /**
  * Hookする関数群を継承して登録
  */
-class Qwel {
-	use	\Qwel_Theme\Supports,
-		\Qwel_Theme\Scripts,
-		\Qwel_Theme\Customizer,
-		\Qwel_Theme\Style,
-		\Qwel_Theme\Widgets;
+class Takasuohana {
+	use	\Takasuohana_Theme\Supports,
+		\Takasuohana_Theme\Scripts,
+		\Takasuohana_Theme\Customizer,
+		\Takasuohana_Theme\Style,
+		\Takasuohana_Theme\Widgets;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -70,6 +71,6 @@ class Qwel {
 }
 
 /**
- * Qwel start!
+ * Takasuohana start!
  */
-new Qwel();
+new Takasuohana();

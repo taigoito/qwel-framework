@@ -1,18 +1,37 @@
 <?php
-namespace Qwel_Theme;
+namespace Takasuohana_Theme;
 
 /**
  * テーマの全般設定を取得する関数群
  */
 trait Base {
-	use \Qwel_Theme\Base_Settings;
+	use \Takasuohana_Theme\Base_Settings;
+
+	/**
+	 * 設定を読み込んで並べ直したセクションの配列を取得
+	 */
+	public static function get_sections() {
+		// $sections を上書きするHook
+		$sections = apply_filters('takasuohana_theme_sections', self::$sections);
+
+		// order で並べ替え
+		uksort($sections, function($key1, $key2) {
+			$sec1    = $sections[$key1];
+			$sec2    = $sections[$key2];
+			$order1  = self::get_data($key1, 'order');
+			$order2  = self::get_data($key2, 'order');
+			return $order1 - $order2;
+		});
+
+		return $sections;
+	}
 
 	/**
 	 * デフォルト設定を取得
 	 */
 	public static function get_default_data($section, $key = false) {
 		// $data を上書きするHook
-		$data = apply_filters('qwel_theme_defaults', self::$data);
+		$data = apply_filters('takasuohana_theme_defaults', self::$data);
 
 		$theme_settings  = $data;
 		$section         = $theme_settings[$section];

@@ -1,6 +1,6 @@
 // Button
 
-@mixin button($size: "xs", $key: "primary", $rounded: "none") {
+@mixin button($size: "xs", $key: "primary", $rounded: "false") {
   margin: auto;
 
   @if $size == "xs" {
@@ -8,18 +8,14 @@
   } @else if $size == "sm" {
     padding: .625rem 1.25rem;
   } @else if $size == "md" {
-    padding: .625rem 2.5rem;
+    padding: .625rem 5rem;
   } @else if $size == "lg" {
-    padding: .75rem 3rem;
+    padding: .75rem 6rem;
   }
 
   border: none;
-  @if $rounded == "sm" {
-    border-radius: .375rem;
-  } @else if $rounded == "md" {
-    border-radius: .75rem;
-  } @else if $rounded == "lg" {
-    border-radius: 2.25rem;
+  @if $rounded == "true" {
+    border-radius:  3rem;
   }
 
   //$color: themeColor($key);

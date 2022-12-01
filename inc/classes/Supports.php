@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace Takasuohana_Theme;
 
 /**
  * テーマサポート機能

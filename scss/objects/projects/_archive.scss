@@ -6,4 +6,9 @@
   @include col();
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  &.--xl {
+    @include col("lg", 8);
+    @include col("xl", 9);
+  }
 }

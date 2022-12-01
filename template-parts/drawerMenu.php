@@ -1,5 +1,5 @@
   <?php
-  $modifier = \Qwel::get_data('header', 'header_disable') ? ' responsiveColor' : '';
+  $modifier = \Takasuohana::get_data('header', 'header_disable') ? ' responsiveColor' : '';
   ?>
   <button id="drawer" class="drawer<?php echo $modifier; ?>" type="button" data-drawer="toggle">
     <span class="drawer__navicon" data-icon="ei-navicon" data-size="m"></span>

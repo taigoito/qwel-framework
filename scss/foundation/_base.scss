@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: var(--root-font-size, $rootFontSize);
+  font-size: var(--root-font-size, 16px);
   
   @media (max-width: breakpoint("sm") - 1) {
     font-size: $rootFontSizeXs;

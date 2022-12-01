@@ -16,24 +16,28 @@
     @include row();
     margin-top: 0;
     margin-bottom: 0;
-  
-    li  {
-      margin-bottom: 0;
-      
-      a {
-        display: block;
-        margin-left: .375rem; // 項目に合わせて適宜に調整
-        text-transform: capitalize;
-        line-height: 1;
+  }
 
-        @at-root .gNav__primaryMenu li a {
-          padding: 1rem; // socialMenu内に入るアイコンと高さを揃える
-        }
-      }
+  &__item {
+    margin-bottom: 0;
+    
+    a {
+      display: block;
+      margin-left: .375rem; // 項目に合わせて適宜に調整
+      text-transform: capitalize;
+      line-height: 1;
 
-      &:first-child a {
-        margin-left: 1.5rem;
+      @at-root .gNav__primaryMenu .gNav__item a {
+        padding: 1rem; // socialMenu内に入るアイコンと高さを揃える
       }
+    }
+
+    &:first-child a {
+      margin-left: 1.5rem;
+    }
+
+    &:last-child a {
+      padding: 0 1rem;
     }
   }
 }
