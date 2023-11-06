@@ -23,6 +23,7 @@
             <li><a href="../service/">service</a></li>
             <li><a href="../topics/">topics</a></li>
             <li><a href="../recruit/">recruit</a></li>
+            <li><a href="https://www.instagram.com/product_meister/" target="_blank"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
           </ul>
           <ul id="footer__secondaryMenu" class="footer__secondaryMenu">
             <li><a href="../privacy/">プライバシーポリシー</a></li>
